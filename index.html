@@ -9,6 +9,53 @@
     <title>Северяночка</title>
 </head>
 <body>
+<header class="header">
+    <div class="container">
+        <div class="header__logo">
+            <img class="logo__img" src="assets/icons/logo.svg" alt="logo">
+            <a href="index.html">СЕВЕРЯНОЧКА</a>
+        </div>
+        <div class="header__catalog">
+            <div class="catalog__burger"></div>
+            <p>Каталог</p>
+        </div>
+        <div class="header__search">
+            <input class="search__input" type="text" placeholder="Найти товар">
+            <img class="search__img" src="assets/icons/search.svg" alt="loop">
+        </div>
+        <ul class="header__menu">
+            <li class="menu__item"><img src="assets/icons/favorite.svg" alt="favorites"><a href="">Избраное</a></li>
+            <li class="menu__item"><img src="assets/icons/orders_icon.svg" alt="orders"><a href="">Заказы</a></li>
+            <li class="menu__item"><img src="assets/icons/shopping-cart.svg" alt="basket"><a href="">Корзина</a></li>
+        </ul>
+        <div class="header__account">
+            <div class="account__dialog">
+                <button id="sign-in-btn" class="account__btn">Войти
+                    <img class="btn__log-in" src="assets/icons/log-in.svg" alt="log-in">
+                </button>
+                <div class="account__authorized">
+                    <img src="assets/images/avatar.svg" alt="avatar" class="account__avatar"><span>Алексей</span>
+                    <img src="assets/icons/arrow.svg" alt="arrow" class="arrow">
+                </div>
+            </div>
+        </div>
 
+        <div class="sign-in-modalJS hide">
+            <div class="sign-in-modal__dialog">
+                <div class="dialog__container">
+                    <h2 class="section__title">Вход</h2>
+                    <p class="dialog__inputLable">Телефон</p>
+                    <input type="tel" class="dialog__inputNumber">
+                    <button class="basket-btn-light"> Вход</button>
+                    <div class="dialog__bottom_content">
+                        <button class="basket-btn">Регистрация</button>
+                        <a class="bottomContent__passwordLink" href="">Забыли пароль?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<script src="js/main.js"></script>
 </body>
 </html>

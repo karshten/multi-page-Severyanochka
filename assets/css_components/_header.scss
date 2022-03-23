@@ -1,0 +1,135 @@
+@import "../helpers/variables";
+@import "header_account-authorize";
+
+.header {
+  margin: 15px 0;
+
+  & .container {
+    @include flex(flex, center, center)
+  }
+
+  & .header__logo {
+    @include flex(flex, start, center);
+    margin-right: 40px;
+
+    & .logo__img {
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
+    & a {
+      color: $black;
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+
+  & .header__catalog {
+    @include flex(flex, space-between, center);
+    background: $green;
+    padding: 11px 16px 11px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 16px;
+    border: 1px solid $green;
+    transition: .4s ease-in-out;
+
+    &:hover {
+      background: $light-green;
+      border: 1px solid $green;
+
+      & p {
+        color: #70C05B;
+      }
+
+      & .catalog__burger,
+      & .catalog__burger:before,
+      & .catalog__burger:after {
+        background: $green;
+      }
+
+
+    }
+
+    & .catalog__burger {
+      margin-right: 23px;
+      position: relative;
+      width: 19px;
+      height: 1px;
+      background: #fff;
+      transition: inherit;
+    }
+
+    & .catalog__burger:before, & .catalog__burger:after {
+      content: '';
+      position: absolute;
+      width: 19px;
+      height: 1px;
+      background: #fff;
+      transition: inherit;
+    }
+
+    & .catalog__burger:before {
+      top: -5px;
+    }
+
+    & .catalog__burger:after {
+      bottom: -5px;
+    }
+
+    & p {
+      color: #fff;
+      font-size: 16px;
+      transition: .4s ease-in-out;
+    }
+
+  }
+
+  & .header__search {
+    width: 375px;
+    margin-right: 40px;
+    padding: 7px 16px;
+    border: 1px solid #70C05B;
+    border-radius: 4px;
+    @include flex(flex, space-between, center);
+
+    & .search__input {
+      padding: 4px 0;
+      border: none;
+      outline: none;
+      color: gray;
+      width: 85%;
+    }
+
+    & .search__img {
+      cursor: pointer;
+    }
+
+  }
+
+  & .header__menu {
+    margin-right: 24px;
+    @include flex(flex, space-between, center);
+
+    & .menu__item {
+      @include flex(flex, start, center);
+      flex-direction: column;
+      margin-right: 24px;
+    }
+
+    & img {
+      height: 20px;
+    }
+
+    & a {
+      margin-top: 10px;
+      color: $black;
+      font-size: 12px;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+  }
+}
