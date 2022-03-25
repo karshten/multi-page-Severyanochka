@@ -4,6 +4,7 @@
 @import "../assets/css_components/header";
 @import "../assets/css_components/intro";
 @import "../assets/css_components/stocks";
+@import "../assets/css_components/novelties";
 
 
 * {
@@ -63,7 +64,7 @@ a {
   font-size: 18px;
   transition: .4s ease-in-out;
 
-  &:focus , &:hover {
+  &:focus, &:hover {
     background: $orange;
     color: #fff;
     border: 1px solid $orange;
@@ -93,6 +94,11 @@ a {
   position: absolute;
   top: 12px;
   right: 0;
+  transition: .3s linear;
+
+  &:hover {
+    opacity: .5;
+  }
 }
 
 .favorite-btn {
@@ -123,7 +129,8 @@ a {
 
 .item-product {
   position: relative;
-  max-width: 22.5%;
+  max-width: 272px;
+  border-radius: 4px;
 
   & .product__content {
     padding: 0 8px 8px;
@@ -170,6 +177,11 @@ a {
 
   & .basket-btn {
     padding: 12px 0;
+
+    &:hover ~.item-product {
+      background: #000;
+      box-shadow: 40px 80px 160px rgba(255, 102, 51, 0.2);
+    }
   }
 }
 

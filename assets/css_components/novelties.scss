@@ -1,0 +1,12 @@
+.novelties {
+  margin: 100px 0;
+
+  & .container {
+    position: relative;
+  }
+
+  .novelties__content {
+    @include flex(flex, space-between, center);
+    flex-wrap: wrap;
+  }
+}
