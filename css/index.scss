@@ -2,6 +2,8 @@
 @import "../assets/helpers/variables";
 @import "../assets/helpers/mixin";
 @import "../assets/css_components/header";
+@import "../assets/css_components/intro";
+@import "../assets/css_components/stocks";
 
 
 * {
@@ -68,8 +70,6 @@ a {
   }
 }
 
-
-
 .basket-btn-light {
   padding: 12px 80px;
   text-align: center;
@@ -86,4 +86,90 @@ a {
   display: none;
 }
 
+.show-all {
+  color: $darkGrey;
+  text-decoration: none;
+  font-size: 16px;
+  position: absolute;
+  top: 12px;
+  right: 0;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  display: block;
+  cursor: pointer;
+  padding: 5px;
+  transition: .3s linear;
+  border-radius: 3px;
+
+  &:hover {
+    background: $orange;
+  }
+}
+
+.stock {
+  position: absolute;
+  top: 40%;
+  left: 8px;
+  background: $orange;
+  width: 56px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.item-product {
+  position: relative;
+  max-width: 22.5%;
+
+  & .product__content {
+    padding: 0 8px 8px;
+  }
+
+  & .product__price {
+    margin: 8px 0;
+    @include flex(flex, space-between, center);
+
+    & .default__price {
+      font-weight: 400;
+      color: $darkGrey;
+    }
+
+    & p {
+      color: $gray;
+      font-size: 12px;
+    }
+  }
+
+  & .product__title {
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    color: $black;
+  }
+
+  & .product-stars {
+    display: flex;
+    margin-bottom: 8px;
+
+    & .stars__star {
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      background: $gray;
+      width: 16px;
+      height: 16px;
+      margin-right: 4px;
+    }
+
+    & .star__active {
+      background: $orange;
+    }
+  }
+
+  & .basket-btn {
+    padding: 12px 0;
+  }
+}
 

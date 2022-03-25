@@ -1,0 +1,11 @@
+.stocks {
+
+  & .container {
+    position: relative;
+  }
+
+  & .stocks__content {
+    @include flex(flex, space-between, center);
+    flex-wrap: wrap;
+  }
+}
