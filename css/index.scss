@@ -61,13 +61,14 @@ a {
   font-size: 18px;
   transition: .4s ease-in-out;
 
-
   &:focus , &:hover {
     background: $orange;
     color: #fff;
     border: 1px solid $orange;
   }
 }
+
+
 
 .basket-btn-light {
   padding: 12px 80px;
