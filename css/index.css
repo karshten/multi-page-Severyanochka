@@ -254,24 +254,12 @@
 .stocks .container {
   position: relative;
 }
-.stocks .stocks__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
 
 .novelties {
   margin: 100px 0;
 }
 .novelties .container {
   position: relative;
-}
-.novelties .novelties__content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 * {
@@ -295,6 +283,7 @@ a {
 }
 
 .container {
+  position: relative;
   max-width: 1208px;
   margin: 0 auto;
 }
@@ -439,6 +428,13 @@ a {
 .item-product .basket-btn:hover ~ .item-product {
   background: #000;
   box-shadow: 40px 80px 160px rgba(255, 102, 51, 0.2);
+}
+
+.section__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 /*# sourceMappingURL=index.css.map */

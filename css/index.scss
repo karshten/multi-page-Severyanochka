@@ -28,6 +28,7 @@ a {
 }
 
 .container {
+  position: relative;
   max-width: 1208px;
   margin: 0 auto;
 }
@@ -178,10 +179,15 @@ a {
   & .basket-btn {
     padding: 12px 0;
 
-    &:hover ~.item-product {
+    &:hover ~ .item-product {
       background: #000;
       box-shadow: 40px 80px 160px rgba(255, 102, 51, 0.2);
     }
   }
+}
+
+.section__content {
+  @include flex(flex, space-between, center);
+  flex-wrap: wrap;
 }
 
