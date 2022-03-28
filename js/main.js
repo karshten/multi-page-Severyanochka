@@ -29,3 +29,6 @@ document.body.addEventListener('keydown', (e) => {
         hideModal(signInModalForm)
     }
 })
+
+
+// lat: 42.8769795, lng: 74.5218206 

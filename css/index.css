@@ -356,6 +356,135 @@
   }
 }
 
+.branches {
+  margin-bottom: 100px;
+}
+.branches .branches__location-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.branches .branches__location-content #map {
+  height: 354px;
+  width: 100%;
+}
+.branches .branches__location-content .location-content__item {
+  background: #F3F2F1;
+  font-size: 14px;
+  padding: 8px 12px 6px;
+  border-radius: 4px;
+  margin-right: 24px;
+  transition: 0.3s ease-in-out;
+  margin-bottom: 24px;
+}
+.branches .branches__location-content .location-content__item:hover {
+  background: #70C05B;
+}
+.branches .branches__location-content .location-content__item:hover a {
+  color: #fff;
+}
+.branches .branches__location-content a {
+  color: #606060;
+  text-align: center;
+}
+
+.articles {
+  margin-bottom: 120px;
+}
+.articles .articles__content {
+  display: flex;
+}
+.articles .articles__content .content__item {
+  position: relative;
+  padding-bottom: 10px;
+  max-width: 376px;
+  height: 420px;
+  margin-right: 40px;
+}
+.articles .articles__content .item__text {
+  padding: 10px;
+}
+.articles .articles__content .text__date {
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #8f8f8f;
+}
+.articles .articles__content .text__title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #414141;
+}
+.articles .articles__content .text__main {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #414141;
+}
+.articles .articles__content .basket-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 150px;
+  padding: 12px 0;
+  background: #E5FFDE;
+  border: none;
+}
+.articles .articles__content .basket-btn:hover {
+  background: #70C05B;
+}
+.articles .articles__content .basket-btn:hover a {
+  color: #fff;
+}
+.articles .articles__content a {
+  color: #70C05B;
+}
+
+.footer {
+  background: url("../assets/images/footerBG.svg") #F9F4E2;
+  padding: 24px 0 48px;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .footer__design {
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+}
+.footer .footer__content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer .footer__content .content__item {
+  margin-right: 40px;
+}
+.footer .footer__content a {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #414141;
+}
+.footer .footer__media {
+  display: flex;
+}
+.footer .footer__media .media__item {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 45px;
+}
+.footer .footer__media .media__item img {
+  display: block;
+  margin-right: 10px;
+}
+.footer .footer__media .item__number {
+  margin-left: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -383,9 +512,10 @@ a {
 }
 
 .section__title {
+  margin-bottom: 40px;
   font-size: 36px;
   font-weight: 700;
-  margin-bottom: 40px;
+  color: #414141;
 }
 
 .arrow {
@@ -405,13 +535,16 @@ a {
 }
 
 .basket-btn {
+  max-width: 256px;
   padding: 12px 95px;
   text-align: center;
   border-radius: 4px;
-  color: #70C05B;
   border: 1px solid #70C05B;
   cursor: pointer;
+  margin-bottom: 0;
   font-size: 18px;
+  font-weight: 400;
+  color: #70C05B;
   transition: 0.4s ease-in-out;
 }
 .basket-btn:focus, .basket-btn:hover {
@@ -424,10 +557,12 @@ a {
   padding: 12px 80px;
   text-align: center;
   border-radius: 4px;
-  color: #FF6633;
   border: 1px solid #FF6633;
   cursor: pointer;
+  margin-bottom: 0;
   font-size: 18px;
+  font-weight: 400;
+  color: #FF6633;
   transition: 0.4s ease-in-out;
   background: #FCD5BA;
 }
@@ -437,9 +572,11 @@ a {
 }
 
 .show-all {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 400;
   color: #606060;
   text-decoration: none;
-  font-size: 16px;
   position: absolute;
   top: 12px;
   right: 0;
@@ -489,12 +626,16 @@ a {
   align-items: center;
 }
 .item-product .product__price .default__price {
+  margin-bottom: 0;
+  font-size: 16px;
   font-weight: 400;
   color: #606060;
 }
 .item-product .product__price p {
-  color: #8f8f8f;
+  margin-bottom: 0;
   font-size: 12px;
+  font-weight: 400;
+  color: #8f8f8f;
 }
 .item-product .product__title {
   margin-bottom: 8px;

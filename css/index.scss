@@ -6,6 +6,9 @@
 @import "../assets/css_components/stocks";
 @import "../assets/css_components/novelties";
 @import "../assets/css_components/offers";
+@import "../assets/css_components/branch";
+@import "../assets/css_components/articles";
+@import "../assets/css_components/footer";
 
 * {
   margin: 0;
@@ -34,9 +37,7 @@ a {
 }
 
 .section__title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 40px;
+  @include text_styles(40px, 36px, 700, $black);
 }
 
 .arrow {
@@ -56,13 +57,13 @@ a {
 }
 
 .basket-btn {
+  max-width: 256px;
   padding: 12px 95px;
   text-align: center;
   border-radius: 4px;
-  color: $green;
   border: 1px solid $green;
   cursor: pointer;
-  font-size: 18px;
+  @include text_styles(0, 18px, 400, $green);
   transition: .4s ease-in-out;
 
   &:focus, &:hover {
@@ -76,10 +77,9 @@ a {
   padding: 12px 80px;
   text-align: center;
   border-radius: 4px;
-  color: $orange;
   border: 1px solid $orange;
   cursor: pointer;
-  font-size: 18px;
+  @include text_styles(0, 18px, 400, $orange);
   transition: .4s ease-in-out;
   background: $light-orange;
 }
@@ -89,9 +89,8 @@ a {
 }
 
 .show-all {
-  color: $darkGrey;
+  @include text_styles(0, 16px, 400, $darkGrey);
   text-decoration: none;
-  font-size: 16px;
   position: absolute;
   top: 12px;
   right: 0;
@@ -142,21 +141,16 @@ a {
     @include flex(flex, space-between, center);
 
     & .default__price {
-      font-weight: 400;
-      color: $darkGrey;
+      @include text_styles(0, 16px, 400, $darkGrey)
     }
 
     & p {
-      color: $gray;
-      font-size: 12px;
+      @include text_styles(0, 12px, 400, $gray);
     }
   }
 
   & .product__title {
-    margin-bottom: 8px;
-    font-size: 16px;
-    font-weight: 400;
-    color: $black;
+    @include text_styles(8px, 16px, 400, $black);
   }
 
   & .product-stars {

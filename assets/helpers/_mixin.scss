@@ -3,3 +3,10 @@
   justify-content: $justify-content;
   align-items: $align-items;
 }
+
+@mixin text_styles ($margin, $fz, $fw, $color){
+    margin-bottom: $margin;
+    font-size: $fz;
+    font-weight: $fw;
+    color: $color;
+}

@@ -427,6 +427,123 @@
         </div>
     </div>
 </section>
+<section class="branches">
+    <div class="container">
+        <h2 class="section__title">Наши магазины</h2>
+        <ul class="branches__location-content">
+            <li class="location-content__item"><a href="">п.Щельяюр</a></li>
+            <li class="location-content__item"><a href="">д.Вертеп</a></li>
+            <li class="location-content__item"><a href="">с.Краснобор</a></li>
+            <li class="location-content__item"><a href="">д.Диюр</a></li>
+        </ul>
+        <div id="map">
+
+        </div>
+    </div>
+</section>
+<section class="articles">
+    <div class="container">
+        <a class="show-all" href="">Все статьи<img class="-right" src="assets/icons/arrow.svg" alt=""></a>
+        <h2 class="section__title">Статья</h2>
+
+        <ul class="articles__content">
+            <li class="content__item">
+                <img class="item__img" src="assets/images/warning.svg" alt="warning">
+                <div class="item__text">
+                    <p class="text__date">05.03.2021</p>
+                    <h4 class="text__title">Режим использования масок и перчаток на территории магазинов</h4>
+                    <p class="text__main">Подробная информация о режимах использования масок и перчаток на территории
+                        магазинов "ЛЕНТА". Информация обновляется каждый будний день.</p>
+                    <div class="basket-btn"><a href="">Подробнее</a></div>
+                </div>
+            </li>
+            <li class="content__item">
+                <img class="item__img" src="assets/images/nature.svg" alt="nature">
+                <div class="item__text">
+                    <p class="text__date">05.03.2021</p>
+                    <h4 class="text__title">Весеннее настроение для каждой</h4>
+                    <p class="text__main">8 Марта – это не просто Международный женский день, это ещё день тюльпанов,
+                        приятных сюрпризов и праздничных тёплых пожеланий</p>
+
+                    <div class="basket-btn"><a href="">Подробнее</a></div>
+                </div>
+            </li>
+            <li class="content__item">
+                <img class="item__img" src="assets/images/health-ff.svg" alt="health-food">
+                <div class="item__text">
+                    <p class="text__date">05.03.2021</p>
+                    <h4 class="text__title">Режим использования масок и перчаток на территории магазинов</h4>
+                    <p class="text__main">Подробная информация о режимах использования масок и перчаток на территории
+                        магазинов "ЛЕНТА". Информация обновляется каждый будний день.</p>
+                    <div class="basket-btn"><a href="">Подробнее</a></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<section class="footer">
+    <div class="container">
+        <ul class="footer__content">
+            <li class="content__item"><img src="assets/icons/footer_logo.svg" alt="logo"></li>
+            <li class="content__item"><a href="">О компании</a></li>
+            <li class="content__item"><a href="">Контакты</a></li>
+            <li class="content__item"><a href="">Вакансии</a></li>
+            <li class="content__item"><a href="">Статьи</a></li>
+            <li class="content__item"><a href="">Политика обработки персональных данных</a></li>
+        </ul>
+        <ul class="footer__media">
+            <li class="media__item">
+                <a href="https://www.instagram.com/" target="_blank"><img src="assets/icons/instagram.svg"
+                                                                          alt="inst"></a>
+                <a href="https://vk.com/" target="_blank"><img src="assets/icons/vkontakte.svg" alt="vk"></a>
+                <a href="https://ru-ru.facebook.com/" target="_blank"><img src="assets/icons/facebook.svg"
+                                                                           alt="facebook"></a>
+                <a href="https://ok.ru/" target="_blank"><img src="assets/icons/ok.svg" alt="ok"></a>
+            </li>
+            <li class="media__item">
+                <img src="assets/icons/phone_icon.svg" alt="phone">
+                <p class="item__number">8 800 777 33 33</p>
+            </li>
+        </ul>
+        <p class="footer__design">Дизайн <img src="assets/icons/design-logo.svg" alt="design-logo"></p>
+
+    </div>
+</section>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbeLEzmkxu9ngL9PeiGqNE0-jlUdeMRug"></script>
 <script src="js/main.js"></script>
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 11,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+
+                    // How you would like to style the map.
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"featureType":"all","elementType":"geometry.fill","stylers":[{"weight":"2.00"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"color":"#9c9c9c"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#eeeeee"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#7b7b7b"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#c8d7d4"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#070707"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(40.6700, -73.9400),
+                    map: map,
+                    title: 'Snazzy!'
+                });
+            }
+        </script>
 </body>
 </html>

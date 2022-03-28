@@ -1,0 +1,35 @@
+.branches {
+  margin-bottom: 100px;
+
+  .branches__location-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    & #map {
+      height: 354px;
+      width: 100%;
+    }
+
+    & .location-content__item {
+      background: #F3F2F1;
+      font-size: 14px;
+      padding: 8px 12px 6px;
+      border-radius: 4px;
+      margin-right: 24px;
+      transition: .3s ease-in-out;
+      margin-bottom: 24px;
+
+      &:hover {
+        background: $green;
+
+        & a {
+          color: #fff;
+        }
+      }
+    }
+    & a {
+      color: $darkGrey;
+      text-align: center;
+    }
+  }
+}
