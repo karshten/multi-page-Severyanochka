@@ -1,5 +1,7 @@
-.header {
+.header, .menu__account {
+
   & .header__account {
+
     & .account__authorized {
       @include flex(flex, start, center);
       display: none;
@@ -123,8 +125,29 @@
         margin-right: 4px;
         border-left: 2px solid $green;
       }
-
     }
   }
 }
 
+@media (max-width: 1208px) {
+  .header {
+
+    & .header__account {
+
+      & .account__btn {
+        padding: 8px 16px;
+        font-size: 0;
+      }
+
+      & .btn__log-in {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header .header__account {
+    display: none;
+  }
+}

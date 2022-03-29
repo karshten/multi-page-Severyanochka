@@ -1,0 +1,138 @@
+.articles {
+  margin-bottom: 120px;
+
+  .articles__content {
+    display: flex;
+
+    & .content__item {
+      position: relative;
+      padding-bottom: 10px;
+      max-width: 376px;
+      height: 420px;
+      margin-right: 40px;
+    }
+
+    & .item__img {
+      width: 100%;
+    }
+
+    & .item__text {
+      padding: 10px;
+    }
+
+    & .text__date {
+      @include text_styles(10px, 12px, 400, $gray);
+    }
+
+    & .text__title {
+      @include text_styles(10px, 18px, 700, $black);
+    }
+
+    & .text__main {
+      @include text_styles(12px, 16px, 400, $black);
+    }
+
+    & .basket-btn {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      width: 150px;
+      padding: 12px 0;
+      background: $light-green;
+      border: none;
+
+      &:hover {
+        background: $green;
+
+        & a {
+          color: #fff;
+        }
+      }
+    }
+
+    & a {
+      color: $green;
+    }
+  }
+}
+
+@media (max-width: 1208px) {
+  .articles .articles__content {
+    justify-content: space-between;
+
+    & .content__item {
+      max-width: 304px;
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .articles .articles__content {
+
+    & .content__item {
+      max-width: 224px;
+      margin-right: 0;
+    }
+
+
+    & .text__date {
+      font-size: 10px;
+    }
+
+    & .text__title {
+      font-size: 16px;
+    }
+
+    & .text__main {
+      font-size: 14px;
+    }
+
+    & .basket-btn {
+      bottom: 35px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .articles {
+
+    & .articles__content {
+      flex-direction: column;
+      align-items: center;
+
+      & .content__item {
+        max-width: 440px;
+        margin-bottom: 30px;
+      }
+
+      & .text__date {
+        font-size: 14px;
+      }
+
+      & .text__title {
+        font-size: 18px;
+      }
+
+      & .text__main {
+        font-size: 16px;
+      }
+
+      & .basket-btn {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .articles {
+
+    & .articles__content {
+
+      & .content__item {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

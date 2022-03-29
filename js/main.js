@@ -1,4 +1,4 @@
-const signInBtn = document.querySelector('#sign-in-btn')
+const signInBtn = document.querySelectorAll('.sign-in-btn')
 const signInModalForm = document.querySelector('.sign-in-modalJS')
 
 const showModal = (modal) => {
@@ -11,9 +11,11 @@ const hideModal = (modal) => {
     document.body.style.overflow = 'scroll'
 }
 
-signInBtn.onclick = () => {
-    showModal(signInModalForm)
-}
+signInBtn.forEach((btn) => {
+    btn.onclick = () => {
+        showModal(signInModalForm)
+    }
+})
 
 const hideModalOnEvent = (modal, modalClass) => {
     modal.addEventListener('click', (e) => {
