@@ -19,10 +19,17 @@
             <div class="catalog__burger"></div>
             <p>Каталог</p>
         </div>
-        <div class="header__search">
-            <input class="search__input" type="text" placeholder="Найти товар">
-            <img class="search__img" src="assets/icons/search.svg" alt="loop">
+        <div class="header__search__content">
+            <div class="header__search">
+                <input class="search__input" type="text" placeholder="Найти товар">
+                <img class="search__img" src="assets/icons/search.svg" alt="loop">
+            </div>
+            <ul class="content__list">
+<!--                <li class="list__item">dadad</li>-->
+<!--                <li class="list__item">dadad</li>-->
+            </ul>
         </div>
+
         <ul class="menu">
             <li class="menu__item"><img src="assets/icons/favorite.svg" alt="favorites"><a href="">Избраное</a></li>
             <li class="menu__item"><img src="assets/icons/orders_icon.svg" alt="orders"><a href="">Заказы</a></li>
@@ -71,11 +78,12 @@
 <section class="stocks">
     <div class="container">
         <h2 class="section__title">Акции</h2>
-        <a class="show-all" href="">Все акции <img class="-right" src="assets/icons/arrow.svg" alt=""></a>
+        <a class="show-all" href="" target="_blank">Все акции <img class="-right" src="assets/icons/arrow.svg"
+                                                                   alt=""></a>
         <div class="section__content">
             <div class="item-product">
                 <img class="favorite-btn" src="assets/icons/favorite.svg" alt="toFavorites">
-                <img class="product__img" src="assets/images/pancackes.svg" alt="pancackes">
+                <img class="product__img" src="assets/images/pancackes.png" alt="pancackes">
                 <div class="stock">
                     -50%
                 </div>
@@ -159,7 +167,7 @@
             </div>
             <div class="item-product">
                 <img class="favorite-btn" src="assets/icons/favorite.svg" alt="toFavorites">
-                <img class="product__img" src="assets/images/meat.svg" alt="meat">
+                <img class="product__img" src="assets/images/meat.png" alt="meat">
                 <div class="stock">
                     -50%
                 </div>
@@ -220,7 +228,7 @@
             </div>
             <div class="item-product">
                 <img class="favorite-btn" src="assets/icons/favorite.svg" alt="toFavorites">
-                <img class="product__img" src="assets/images/meat.svg" alt="pancackes">
+                <img class="product__img" src="assets/images/meat.png" alt="pancackes">
                 <div class="product__content">
                     <div class="product__price">
                         <div class="price__cart__content">
@@ -353,7 +361,7 @@
             </div>
             <div class="item-product">
                 <img class="favorite-btn" src="assets/icons/favorite.svg" alt="toFavorites">
-                <img class="product__img" src="assets/images/bigger-sosuage.svg" alt="pancackes">
+                <img class="product__img" src="assets/images/sliced-sosuage.png" alt="pancackes">
                 <div class="product__content">
                     <div class="product__price">
                         <div class="price__cart__content">
@@ -420,7 +428,7 @@
                     <h4 class="text__title">Покупайте акционные товары</h4>
                     <p>И получайте вдвое больше бонусов</p>
                 </div>
-                <img class="right__basket" src="assets/images/banner-basket.svg" alt="basket">
+                <img class="right__basket" src="assets/images/basket.png" alt="basket">
                 <img class="right__star" src="assets/images/+.svg" alt="plus">
                 <img class="right__star second" src="assets/images/+.svg" alt="plus">
             </div>
@@ -436,9 +444,9 @@
             <li class="location-content__item"><a href="">с.Краснобор</a></li>
             <li class="location-content__item"><a href="">д.Диюр</a></li>
         </ul>
-        <div id="map">
-
-        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11700.771685605941!2d74.58147690000001!3d42.84765945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skg!4v1648566015857!5m2!1sru!2skg"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </section>
 <section class="articles">
@@ -448,7 +456,7 @@
 
         <ul class="articles__content">
             <li class="content__item">
-                <img class="item__img" src="assets/images/warning.svg" alt="warning">
+                <img class="item__img" src="assets/images/warning.jpg" alt="warning">
                 <div class="item__text">
                     <p class="text__date">05.03.2021</p>
                     <h4 class="text__title">Режим использования масок и перчаток на территории магазинов</h4>
@@ -458,7 +466,7 @@
                 </div>
             </li>
             <li class="content__item">
-                <img class="item__img" src="assets/images/nature.svg" alt="nature">
+                <img class="item__img" src="assets/images/nature.jpg" alt="nature">
                 <div class="item__text">
                     <p class="text__date">05.03.2021</p>
                     <h4 class="text__title">Весеннее настроение для каждой</h4>
@@ -469,7 +477,7 @@
                 </div>
             </li>
             <li class="content__item">
-                <img class="item__img" src="assets/images/health-ff.svg" alt="health-food">
+                <img class="item__img" src="assets/images/health-food.jpg" alt="health-food">
                 <div class="item__text">
                     <p class="text__date">05.03.2021</p>
                     <h4 class="text__title">Режим использования масок и перчаток на территории магазинов</h4>
@@ -539,106 +547,8 @@
 
     </div>
 </section>
-<script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbeLEzmkxu9ngL9PeiGqNE0-jlUdeMRug"></script>
+
 <script src="js/main.js"></script>
-<script type="text/javascript">
-    // When the window has finished loading create our google map below
-    google.maps.event.addDomListener(window, 'load', init);
-
-    function init() {
-        // Basic options for a simple Google Map
-        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-        var mapOptions = {
-            // How zoomed in you want the map to start at (always required)
-            zoom: 11,
-
-            // The latitude and longitude to center the map (always required)
-            center: new google.maps.LatLng(40.6700, -73.9400), // New York
-
-            // How you would like to style the map.
-            // This is where you would paste any style found on Snazzy Maps.
-            styles: [{
-                "featureType": "all",
-                "elementType": "geometry.fill",
-                "stylers": [{"weight": "2.00"}]
-            }, {
-                "featureType": "all",
-                "elementType": "geometry.stroke",
-                "stylers": [{"color": "#9c9c9c"}]
-            }, {
-                "featureType": "all",
-                "elementType": "labels.text",
-                "stylers": [{"visibility": "on"}]
-            }, {
-                "featureType": "landscape",
-                "elementType": "all",
-                "stylers": [{"color": "#f2f2f2"}]
-            }, {
-                "featureType": "landscape",
-                "elementType": "geometry.fill",
-                "stylers": [{"color": "#ffffff"}]
-            }, {
-                "featureType": "landscape.man_made",
-                "elementType": "geometry.fill",
-                "stylers": [{"color": "#ffffff"}]
-            }, {"featureType": "poi", "elementType": "all", "stylers": [{"visibility": "off"}]}, {
-                "featureType": "road",
-                "elementType": "all",
-                "stylers": [{"saturation": -100}, {"lightness": 45}]
-            }, {
-                "featureType": "road",
-                "elementType": "geometry.fill",
-                "stylers": [{"color": "#eeeeee"}]
-            }, {
-                "featureType": "road",
-                "elementType": "labels.text.fill",
-                "stylers": [{"color": "#7b7b7b"}]
-            }, {
-                "featureType": "road",
-                "elementType": "labels.text.stroke",
-                "stylers": [{"color": "#ffffff"}]
-            }, {
-                "featureType": "road.highway",
-                "elementType": "all",
-                "stylers": [{"visibility": "simplified"}]
-            }, {
-                "featureType": "road.arterial",
-                "elementType": "labels.icon",
-                "stylers": [{"visibility": "off"}]
-            }, {
-                "featureType": "transit",
-                "elementType": "all",
-                "stylers": [{"visibility": "off"}]
-            }, {
-                "featureType": "water",
-                "elementType": "all",
-                "stylers": [{"color": "#46bcec"}, {"visibility": "on"}]
-            }, {
-                "featureType": "water",
-                "elementType": "geometry.fill",
-                "stylers": [{"color": "#c8d7d4"}]
-            }, {
-                "featureType": "water",
-                "elementType": "labels.text.fill",
-                "stylers": [{"color": "#070707"}]
-            }, {"featureType": "water", "elementType": "labels.text.stroke", "stylers": [{"color": "#ffffff"}]}]
-        };
-
-        // Get the HTML DOM element that will contain your map
-        // We are using a div with id="map" seen below in the <body>
-        var mapElement = document.getElementById('map');
-
-        // Create the Google Map using our element and options defined above
-        var map = new google.maps.Map(mapElement, mapOptions);
-
-        // Let's also add a marker while we're at it
-        var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(40.6700, -73.9400),
-            map: map,
-            title: 'Snazzy!'
-        });
-    }
-</script>
+<script src="js/searcher.js"></script>
 </body>
 </html>

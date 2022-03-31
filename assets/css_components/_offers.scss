@@ -143,10 +143,6 @@
       width: 205px;
     }
 
-    & .right__basket {
-      width: 172px;
-    }
-
     & .right__star {
       width: 15px;
       height: 15px;
@@ -188,7 +184,9 @@
       }
 
       & .right__basket {
+        margin-top: 15px;
         width: 202px;
+        height: 150px;
       }
 
       & .right__star {
@@ -232,10 +230,6 @@
 
       & .left__soap {
         width: 205px;
-      }
-
-      & .right__basket {
-        width: 150px;
       }
 
       & .right__star {

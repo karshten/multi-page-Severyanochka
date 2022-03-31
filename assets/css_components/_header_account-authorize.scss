@@ -107,7 +107,7 @@
         outline: none;
         padding-left: 16px;
         margin-right: 4px;
-        border:none;
+        border: none;
         font-size: 16px;
       }
 
@@ -147,7 +147,35 @@
 }
 
 @media (max-width: 768px) {
-  .header .header__account {
-    display: none;
+  .header {
+
+    &.header__account {
+      display: none;
+    }
+
+    & .sign-in-modal {
+
+      & .sign-in-modal__dialog {
+        padding-top: 40px;
+        width: 300px;
+        height: 360px;
+      }
+
+      & #phone__select {
+        height: 80%;
+        max-width: 34%;
+        outline: none;
+        padding-left: 16px;
+        margin-right: 4px;
+        border: none;
+        font-size: 16px;
+      }
+
+      & #phone__select option {
+        font-size: 16px;
+        width: 50%;
+        height: 50%;
+      }
+    }
   }
 }

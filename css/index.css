@@ -127,8 +127,27 @@
   }
 }
 @media (max-width: 768px) {
-  .header .header__account {
+  .header.header__account {
     display: none;
+  }
+  .header .sign-in-modal .sign-in-modal__dialog {
+    padding-top: 40px;
+    width: 300px;
+    height: 360px;
+  }
+  .header .sign-in-modal #phone__select {
+    height: 80%;
+    max-width: 34%;
+    outline: none;
+    padding-left: 16px;
+    margin-right: 4px;
+    border: none;
+    font-size: 16px;
+  }
+  .header .sign-in-modal #phone__select option {
+    font-size: 16px;
+    width: 50%;
+    height: 50%;
   }
 }
 .header {
@@ -203,26 +222,6 @@
   font-size: 16px;
   transition: 0.4s ease-in-out;
 }
-.header .header__search {
-  width: 375px;
-  margin-right: 40px;
-  padding: 7px 16px;
-  border: 1px solid #70C05B;
-  border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header .header__search .search__input {
-  padding: 4px 0;
-  border: none;
-  outline: none;
-  color: gray;
-  width: 85%;
-}
-.header .header__search .search__img {
-  cursor: pointer;
-}
 
 @media (max-width: 950px) {
   .header .header__logo {
@@ -250,17 +249,72 @@
     font-size: 0;
   }
 }
+@media (max-width: 560px) {
+  .header .header__catalog {
+    display: none;
+  }
+}
+.header .header__search__content {
+  position: relative;
+  border: 1px solid #70C05B;
+  margin-right: 30px;
+  max-width: 375px;
+}
+.header .header__search__content .header__search {
+  width: 375px;
+  padding: 7px 16px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__search__content .header__search .search__input {
+  font-size: 16px;
+  color: #414141;
+  padding: 4px 0;
+  border: none;
+  outline: none;
+  width: 85%;
+}
+.header .header__search__content .header__search .search__img {
+  cursor: pointer;
+}
+.header .header__search__content .content__list {
+  left: -1px;
+  position: absolute;
+  width: 100.6%;
+  border-right: 1px solid #70C05B;
+}
+.header .header__search__content .content__list > :last-of-type {
+  border-bottom: 1px solid #70C05B;
+  font-size: 16px;
+}
+.header .header__search__content .content__list .list__item {
+  border-left: 1px solid #70C05B;
+  padding: 7px 16px;
+  z-index: 3;
+  width: 100%;
+  background: #fff;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .header .menu {
     display: none;
   }
-  .header .header__search {
+  .header .header__search__content {
     margin-right: 15px;
   }
 }
 @media (max-width: 560px) {
-  .header .header__catalog {
+  .header__account {
     display: none;
+  }
+
+  .header .header__search__content .header__search {
+    max-width: 400px;
+    min-width: 300px;
+    width: auto;
   }
 }
 .intro {
@@ -373,6 +427,7 @@
 }
 .item-product .product__img {
   width: 100%;
+  max-height: 130px;
 }
 .item-product .product__price {
   margin: 8px 0;
@@ -444,6 +499,10 @@
   .section__content .item-product {
     margin-bottom: 20px;
   }
+  .section__content .item-product .product__img {
+    width: 100%;
+    max-height: 95px;
+  }
 }
 @media (max-width: 560px) {
   .section__content > :last-of-type {
@@ -453,6 +512,9 @@
     height: 300px;
     max-width: 160px;
     margin-bottom: 30px;
+  }
+  .section__content .item-product .product__price {
+    margin-top: 15px;
   }
   .section__content .item-product .product__price .default__price {
     font-size: 12px;
@@ -614,9 +676,6 @@
   .offers .offers__content .left__soap {
     width: 205px;
   }
-  .offers .offers__content .right__basket {
-    width: 172px;
-  }
   .offers .offers__content .right__star {
     width: 15px;
     height: 15px;
@@ -649,7 +708,9 @@
     width: 255px;
   }
   .offers .offers__content .right__basket {
+    margin-top: 15px;
     width: 202px;
+    height: 150px;
   }
   .offers .offers__content .right__star {
     width: 25px;
@@ -685,9 +746,6 @@
   }
   .offers .offers__content .left__soap {
     width: 205px;
-  }
-  .offers .offers__content .right__basket {
-    width: 150px;
   }
   .offers .offers__content .right__star {
     width: 15px;
@@ -1144,6 +1202,7 @@ a {
 @media (max-width: 560px) {
   .container {
     max-width: 336px;
+    padding: 0 5px;
   }
 
   .section__title {

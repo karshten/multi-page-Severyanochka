@@ -85,28 +85,6 @@
 
   }
 
-  & .header__search {
-    width: 375px;
-    margin-right: 40px;
-    padding: 7px 16px;
-    border: 1px solid #70C05B;
-    border-radius: 4px;
-    @include flex(flex, space-between, center);
-
-    & .search__input {
-      padding: 4px 0;
-      border: none;
-      outline: none;
-      color: gray;
-      width: 85%;
-    }
-
-    & .search__img {
-      cursor: pointer;
-    }
-
-  }
-
 }
 
 @media (max-width: 950px) {
@@ -144,21 +122,6 @@
     }
   }
 }
-
-@media (max-width: 768px) {
-  .header {
-
-    & .menu {
-      display: none;
-    }
-
-    & .header__search {
-      margin-right: 15px;
-    }
-  }
-}
-
-
 @media (max-width: 560px) {
   .header {
 

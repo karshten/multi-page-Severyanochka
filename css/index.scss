@@ -2,6 +2,7 @@
 @import "../assets/helpers/variables";
 @import "../assets/helpers/mixin";
 @import "../assets/css_components/header";
+@import "../assets/css_components/searcher";
 @import "../assets/css_components/intro";
 @import "../assets/css_components/product-item-component";
 @import "../assets/css_components/stocks";
@@ -151,6 +152,7 @@ a {
 @media (max-width: 560px) {
   .container {
     max-width: 336px;
+    padding: 0 5px;
   }
   .section__title {
     @include text_styles(15px, 18px, 700, $black);
