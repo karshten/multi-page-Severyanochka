@@ -258,6 +258,7 @@
   position: relative;
   border: 1px solid #70C05B;
   margin-right: 30px;
+  z-index: 2;
   max-width: 375px;
 }
 .header .header__search__content .header__search {
@@ -307,14 +308,20 @@
   }
 }
 @media (max-width: 560px) {
-  .header__account {
+  .header .header__account {
     display: none;
   }
-
+  .header .header__search__content {
+    max-width: 375px;
+  }
   .header .header__search__content .header__search {
-    max-width: 400px;
-    min-width: 300px;
     width: auto;
+    min-width: 300px;
+  }
+}
+@media (max-width: 420px) {
+  .header .header__search__content .header__search {
+    min-width: 250px;
   }
 }
 .intro {
@@ -418,6 +425,9 @@
 }
 
 .item-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   max-width: 272px;
   border-radius: 4px;
@@ -427,7 +437,8 @@
 }
 .item-product .product__img {
   width: 100%;
-  max-height: 130px;
+  max-height: 150px;
+  min-height: 100px;
 }
 .item-product .product__price {
   margin: 8px 0;
@@ -497,11 +508,11 @@
     display: block;
   }
   .section__content .item-product {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   .section__content .item-product .product__img {
     width: 100%;
-    max-height: 95px;
+    max-height: 120px;
   }
 }
 @media (max-width: 560px) {
@@ -511,7 +522,7 @@
   .section__content .item-product {
     height: 300px;
     max-width: 160px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
   .section__content .item-product .product__price {
     margin-top: 15px;
@@ -871,6 +882,9 @@
   }
 }
 @media (max-width: 768px) {
+  .articles {
+    margin-bottom: 80px;
+  }
   .articles .articles__content {
     flex-direction: column;
     align-items: center;
@@ -893,6 +907,9 @@
   }
 }
 @media (max-width: 560px) {
+  .articles {
+    margin-bottom: 40px;
+  }
   .articles .articles__content .content__item {
     margin-bottom: 50px;
   }
@@ -1206,7 +1223,7 @@ a {
   }
 
   .section__title {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     font-size: 18px;
     font-weight: 700;
     color: #414141;

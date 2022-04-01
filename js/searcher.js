@@ -17,8 +17,10 @@ let catalogNames = [
     'Чай',
     'Кофе',
     'Масло сливочное',
-    'Еда'
+    'Еда',
 ]
+
+console.log(catalogNames[14].length)
 
 const sortedNames = catalogNames.sort()
 
@@ -32,12 +34,15 @@ inputSearch.addEventListener('keyup', () => {
     removeListItem()
 
     for (let i of sortedNames) {
-        if (i.toLowerCase().startsWith(value.toLowerCase())
+        if (i.toLowerCase().includes(value.toLowerCase())
             && value !== '') {
 
             let listItem = document.createElement('li')
             listItem.classList.add('list__item')
             listItem.setAttribute("onclick", "displayNames('"+ i +"')")
+            let word = ()=>{
+                sortedNames[i]
+            }
 
             let name = "<b>" + i.substr(0, value.length) + "</b>";
             name += i.substr(value.length)

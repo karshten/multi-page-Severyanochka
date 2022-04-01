@@ -155,7 +155,7 @@ a {
     padding: 0 5px;
   }
   .section__title {
-    @include text_styles(15px, 18px, 700, $black);
+    @include text_styles(25px, 18px, 700, $black);
   }
 
   .show-all {

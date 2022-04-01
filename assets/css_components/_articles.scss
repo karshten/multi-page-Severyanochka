@@ -97,6 +97,8 @@
 @media (max-width: 768px) {
   .articles {
 
+    margin-bottom: 80px;
+
     & .articles__content {
       flex-direction: column;
       align-items: center;
@@ -127,6 +129,7 @@
 
 @media (max-width: 560px) {
   .articles {
+    margin-bottom: 40px;
 
     & .articles__content {
 
