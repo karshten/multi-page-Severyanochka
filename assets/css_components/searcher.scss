@@ -48,6 +48,19 @@
   }
 }
 
+.section__search-response {
+  margin: 80px 0;
+
+  & .response__label-about {
+    @include text_styles(40px, 24px, 400, $black);
+
+    & .label-about__name {
+      color: $orange;
+      margin-left: 10px;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .header {
 

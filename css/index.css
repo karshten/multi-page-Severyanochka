@@ -299,6 +299,20 @@
   cursor: pointer;
 }
 
+.section__search-response {
+  margin: 80px 0;
+}
+.section__search-response .response__label-about {
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: 400;
+  color: #414141;
+}
+.section__search-response .response__label-about .label-about__name {
+  color: #FF6633;
+  margin-left: 10px;
+}
+
 @media (max-width: 768px) {
   .header .menu {
     display: none;

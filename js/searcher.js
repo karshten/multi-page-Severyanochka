@@ -1,3 +1,10 @@
+import
+{
+    sectionResponse, contentResponse, labelResponse, undefinedResponse, mainPageContent,
+    hide, show
+}
+    from "./render.js";
+
 let catalogNames = [
     'Молоко',
     'Колбаса',
@@ -20,17 +27,12 @@ let catalogNames = [
     'Еда',
 ]
 
-console.log(catalogNames[14].length)
-
 const sortedNames = catalogNames.sort()
-
 const inputSearch = document.querySelector('.search__input')
-
 const listSearch = document.querySelector('.content__list')
 
-inputSearch.addEventListener('keyup', () => {
+inputSearch.addEventListener('keyup', (e) => {
     const value = inputSearch.value
-
     removeListItem()
 
     for (let i of sortedNames) {
@@ -39,10 +41,7 @@ inputSearch.addEventListener('keyup', () => {
 
             let listItem = document.createElement('li')
             listItem.classList.add('list__item')
-            listItem.setAttribute("onclick", "displayNames('"+ i +"')")
-            let word = ()=>{
-                sortedNames[i]
-            }
+            listItem.setAttribute("onclick", "displayNames('" + i + "')")
 
             let name = "<b>" + i.substr(0, value.length) + "</b>";
             name += i.substr(value.length)
@@ -51,6 +50,11 @@ inputSearch.addEventListener('keyup', () => {
             listSearch.appendChild(listItem)
         }
     }
+
+    if (e.code === 'Enter' && value !== '') {
+        onSearch(value)
+        removeListItem()
+    }
 })
 
 function displayNames(value) {
@@ -58,8 +62,19 @@ function displayNames(value) {
     removeListItem()
 }
 
-function removeListItem (){
-    document.querySelectorAll(".list__item").forEach ((item)=>{
+function removeListItem() {
+    document.querySelectorAll(".list__item").forEach((item) => {
         item.remove()
     })
 }
+
+function onSearch(value) {
+    inputSearch.value = ''
+    hide(mainPageContent)
+    show(sectionResponse)
+    labelResponse.innerHTML = value
+    console.log('check')
+}
+
+hide(sectionResponse)
+hide(undefinedResponse)
