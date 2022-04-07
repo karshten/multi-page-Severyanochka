@@ -11,3 +11,10 @@ export function hide(elem) {
 export function show(elem) {
     elem.classList.remove('hide')
 }
+
+export function showFade(elem) {
+    elem.classList.add('fade')
+}
+export function hideFade(elem) {
+    elem.classList.remove('fade')
+}

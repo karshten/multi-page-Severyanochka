@@ -1,7 +1,7 @@
 import
 {
     sectionResponse, contentResponse, labelResponse, undefinedResponse, mainPageContent,
-    hide, show
+    hide, show, hideFade, showFade
 }
     from "./render.js";
 
@@ -30,32 +30,64 @@ let catalogNames = [
 const sortedNames = catalogNames.sort()
 const inputSearch = document.querySelector('.search__input')
 const listSearch = document.querySelector('.content__list')
+const btnSearch = document.querySelector('.searchBtn')
+hide(undefinedResponse)
 
 inputSearch.addEventListener('keyup', (e) => {
-    const value = inputSearch.value
-    removeListItem()
+        let value = inputSearch.value
+        const correctText = inputSearch.value[0].toUpperCase()
+        inputSearch.value = inputSearch.value.replace(inputSearch.value[0], correctText)
+        removeListItem()
+        for (let i of sortedNames) {
+            if (i.toLowerCase().includes(value.toLowerCase())
+                && value !== '') {
 
-    for (let i of sortedNames) {
-        if (i.toLowerCase().includes(value.toLowerCase())
-            && value !== '') {
+                let listItem = document.createElement('li')
+                listItem.classList.add('list__item')
+                listItem.setAttribute("onclick", "displayNames('" + i + "')")
 
-            let listItem = document.createElement('li')
-            listItem.classList.add('list__item')
-            listItem.setAttribute("onclick", "displayNames('" + i + "')")
+                let name = "<b>" + i.substr(0, value.length) + "</b>";
+                name += i.substr(value.length)
 
-            let name = "<b>" + i.substr(0, value.length) + "</b>";
-            name += i.substr(value.length)
 
-            listItem.innerHTML = name
-            listSearch.appendChild(listItem)
+                listItem.onclick = (e) => {
+                    onSearch(e.target.innerHTML)
+                    // inputSearch.value = e.target.innerHTML
+                    // inputSearch.value =''
+                }
+
+                listItem.innerHTML = name
+                listSearch.appendChild(listItem)
+            }
+        }
+
+        if (sortedNames.includes(value)) {
+            e.code === 'Enter' && value !== '' ? onFined(value) : NaN
+            btnSearch.onclick = () => {
+                onFined(value)
+            }
+        } else {
+            btnSearch.onclick = () => {
+                onUndefined(value)
+            }
+            e.code === 'Enter' && value !== '' ? onUndefined(value) : NaN
         }
     }
+)
 
-    if (e.code === 'Enter' && value !== '') {
-        onSearch(value)
-        removeListItem()
-    }
-})
+function onUndefined(value) {
+    onSearch(value)
+    show(undefinedResponse)
+    hide(contentResponse)
+    contentResponse.classList.remove('section__content')
+}
+
+function onFined(value) {
+    onSearch(value)
+    hide(undefinedResponse)
+    show(contentResponse)
+    contentResponse.classList.add('section__content')
+}
 
 function displayNames(value) {
     inputSearch.value = value
@@ -69,12 +101,15 @@ function removeListItem() {
 }
 
 function onSearch(value) {
+    const correctText = inputSearch.value[0].toUpperCase()
+    inputSearch.value = inputSearch.value.replace(inputSearch.value[0], correctText)
     inputSearch.value = ''
+    removeListItem()
     hide(mainPageContent)
     show(sectionResponse)
+    showFade(sectionResponse)
+    setTimeout(() => {
+        hideFade(sectionResponse)
+    }, 500)
     labelResponse.innerHTML = value
-    console.log('check')
 }
-
-hide(sectionResponse)
-hide(undefinedResponse)

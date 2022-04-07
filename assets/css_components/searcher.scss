@@ -48,6 +48,22 @@
   }
 }
 
+.fade {
+  animation: fade .5s ease-in-out 1;
+}
+
+@keyframes fade {
+  0% {
+    transform: scale(.7);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .section__search-response {
   margin: 80px 0;
 
@@ -57,6 +73,10 @@
     & .label-about__name {
       color: $orange;
       margin-left: 10px;
+    }
+
+    & b {
+      font-weight: 400;
     }
   }
 }
