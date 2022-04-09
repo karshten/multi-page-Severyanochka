@@ -3,15 +3,18 @@
 @import "../assets/helpers/mixin";
 @import "../assets/css_components/header";
 @import "../assets/css_components/searcher";
-@import "../assets/css_components/intro";
+@import "../assets/css_components/main-page-css/intro";
 @import "../assets/css_components/product-item-component";
-@import "../assets/css_components/stocks";
-@import "../assets/css_components/novelties";
-@import "../assets/css_components/offers";
-@import "../assets/css_components/branch";
-@import "../assets/css_components/articles";
+@import "../assets/css_components/main-page-css/stocks";
+@import "../assets/css_components/main-page-css/novelties";
+@import "../assets/css_components/main-page-css/offers";
+@import "../assets/css_components/main-page-css/branch";
+@import "../assets/css_components/main-page-css/articles";
 @import "../assets/css_components/footer";
 @import "../assets/css_components/bottom-footer";
+@import "../assets/css_components/catalog/header_catalog_window";
+@import "../assets/css_components/catalog/main_catalog";
+@import "../assets/css_components/catalog/product_pict";
 
 * {
   margin: 0;

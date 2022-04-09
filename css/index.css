@@ -369,6 +369,18 @@
 .intro h1 {
   font-size: 48px;
   font-weight: 700;
+  animation: up-Down 1.5s infinite linear;
+}
+@keyframes up-Down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(13px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 1208px) {
@@ -462,6 +474,7 @@
   position: relative;
   max-width: 272px;
   border-radius: 4px;
+  margin-bottom: 20px;
 }
 .item-product .product__content {
   padding: 0 8px 8px;
@@ -1103,6 +1116,125 @@
     margin-left: 0;
     width: 24px;
     height: 24px;
+  }
+}
+.window_catalog_content {
+  padding: 40px 116px 0 0;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.window_catalog_content a {
+  width: 260px;
+  margin-bottom: 24px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #414141;
+}
+
+.window_catalog_content a:hover {
+  color: #FF6633;
+}
+
+.right_arrow {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.main_catalog {
+  margin-top: 97px;
+  margin-bottom: 60px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  text-decoration: none;
+  color: #414141;
+}
+
+.main_catalog span {
+  color: #8F8F8F;
+}
+
+.title {
+  font-family: "Rubik";
+  font-weight: 700;
+  font-size: 64px;
+  margin-top: 27px;
+}
+
+.green_linear:hover {
+  background-image: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #FF6633 100%);
+}
+
+.product_pict div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  justify-content: space-between;
+  position: relative;
+  text-align: center;
+}
+
+.img_catalog {
+  border-radius: 2%;
+}
+
+.green_linear {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, rgba(112, 192, 91, 0) 0%, #70C05B 98.81%);
+  border-radius: 2%;
+}
+
+.href_picture_content {
+  display: flex;
+  align-items: flex-end;
+  margin: 163px 10px 10px 10px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.other a {
+  position: absolute;
+  margin: 136px 0 10px 10px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+@media screen and (max-width: 770px) {
+  .title {
+    margin-left: 14px;
+    font-size: 48px;
+  }
+
+  .main_catalog {
+    margin-left: 14px;
+    font-size: 12px;
+  }
+
+  .rectangle {
+    max-width: 448px;
+  }
+
+  .square {
+    max-width: 256px;
+  }
+
+  .product_pict div {
+    justify-content: start;
+    margin: 14px;
   }
 }
 * {
