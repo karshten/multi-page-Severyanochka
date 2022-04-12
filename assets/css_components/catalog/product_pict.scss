@@ -1,73 +1,64 @@
-.product_pict div {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-    justify-content: space-between;
+.product_pict {
+
+  & .product_content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+
+  & .img_catalog {
     position: relative;
-    text-align: center;
+    max-width: 272px;
+    margin: 0 32px 28px 0;
+    cursor: pointer;
 
-}
-
-.img_catalog {
-    border-radius: 2%;
-}
-
-.green_linear {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(180deg, rgba(112, 192, 91, 0) 0%, #70C05B 98.81%);
-    border-radius: 2%;
-}
-
-
-.href_picture_content {
-    display: flex;
-    align-items: flex-end;
-    margin: 163px 10px 10px 10px;
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    color: #FFFFFF;
-
-
-}
-
-.other a {
-    position: absolute;
-    margin: 136px 0 10px 10px;
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    color: #FFFFFF;
-    text-align: left;
-
-}
-
-@media screen and (max-width: 770px) {
-    .title {
-        margin-left: 14px;
-        font-size: 48px;
+    &:after {
+      z-index: 3;
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: linear-gradient(180deg, rgba(112, 192, 91, 0) 0%, #70C05B 82.81%);
+      transition: .5s ease-in-out;
+      transform-origin: left bottom;
     }
 
-    .main_catalog {
-        margin-left: 14px;
-        font-size: 12px;
+    &:hover:after {
+      width: 100%;
+      height: 80%;
+      background: linear-gradient(180deg, rgba(255, 102, 51, 0) 0%, #FF6633 100%);
     }
 
-    .rectangle {
-        max-width: 448px;
+    &:before {
+      z-index: 2;
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      background: linear-gradient(180deg, rgba(112, 192, 91, 0) 0%, #70C05B 82.81%);
     }
 
-    .square {
-        max-width: 256px;
+    & span a {
+      z-index: 4;
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      @include text_styles(0, 18px, 700, #fff);
     }
 
-    .product_pict div {
-        justify-content: start;
-        margin: 14px;
-
+    & img {
+      border-radius: 3px;
     }
+  }
+
+  & .bigger__img {
+    max-width: 584px;
+  }
+
+  & .more-fr {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

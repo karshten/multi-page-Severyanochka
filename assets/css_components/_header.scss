@@ -5,7 +5,7 @@
   margin: 15px 0;
 
   & .container {
-    @include flex(flex, center, center);
+    @include flex(flex, space-evenly, center);
   }
 
   & .header__logo {

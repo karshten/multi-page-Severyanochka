@@ -1,4 +1,5 @@
 @import "../assets/fonts/fonts.css";
+@import "../assets/css_components/components";
 @import "../assets/helpers/variables";
 @import "../assets/helpers/mixin";
 @import "../assets/css_components/header";
@@ -12,7 +13,6 @@
 @import "../assets/css_components/main-page-css/articles";
 @import "../assets/css_components/footer";
 @import "../assets/css_components/bottom-footer";
-@import "../assets/css_components/catalog/header_catalog_window";
 @import "../assets/css_components/catalog/main_catalog";
 @import "../assets/css_components/catalog/product_pict";
 
@@ -34,134 +34,4 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-.container {
-  position: relative;
-  max-width: 1208px;
-  margin: 0 auto;
-}
-
-.section__title {
-  @include text_styles(40px, 36px, 700, $black);
-}
-
-.arrow {
-  cursor: pointer;
-}
-
-.-right {
-  transform: rotate(270deg);
-}
-
-.-left {
-  transform: rotate(90deg);
-}
-
-.chevrons-left {
-  transform: rotate(180deg);
-}
-
-.basket-btn {
-  max-width: 256px;
-  padding: 12px 95px;
-  text-align: center;
-  border-radius: 4px;
-  border: 1px solid $green;
-  cursor: pointer;
-  @include text_styles(0, 18px, 400, $green);
-  transition: .4s ease-in-out;
-
-  &:focus, &:hover {
-    background: $orange;
-    color: #fff;
-    border: 1px solid $orange;
-  }
-}
-
-.basket-btn-light {
-  padding: 12px 80px;
-  text-align: center;
-  border-radius: 4px;
-  border: 1px solid $orange;
-  cursor: pointer;
-  @include text_styles(0, 18px, 400, $orange);
-  transition: .4s ease-in-out;
-  background: $light-orange;
-}
-
-.menu {
-  margin-right: 24px;
-  @include flex(flex, space-between, flex-end);
-
-  & .menu__item {
-    @include flex(flex, start, center);
-    flex-direction: column;
-    margin-right: 24px;
-  }
-
-  & img {
-    height: 20px;
-  }
-
-  & a {
-    margin-top: 10px;
-    color: $black;
-    font-size: 12px;
-
-    &:hover {
-      color: $orange;
-    }
-  }
-}
-
-.hide {
-  display: none;
-}
-
-.section__content {
-  @include flex(flex, space-between, center);
-  flex-wrap: wrap;
-}
-
-@media (max-width: 1208px) {
-  .container {
-    max-width: 1050px;
-  }
-}
-
-@media (max-width: 1080px) {
-  .container {
-    max-width: 920px;
-  }
-}
-
-@media (max-width: 950px) {
-  .container {
-    max-width: 737px;
-  }
-
-  .section__title {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (max-width: 560px) {
-  .container {
-    max-width: 336px;
-    padding: 0 5px;
-  }
-  .section__title {
-    @include text_styles(25px, 18px, 700, $black);
-  }
-
-  .show-all {
-    font-size: 14px;
-  }
 }

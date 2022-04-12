@@ -1,6 +1,7 @@
 .footer {
   background: url("../assets/images/footerBG.svg") #F9F4E2;
   padding: 24px 0 48px;
+  margin-top: 80px;
 
   & .container {
     @include flex(flex, space-between, center);

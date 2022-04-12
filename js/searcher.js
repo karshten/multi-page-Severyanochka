@@ -35,13 +35,13 @@ hide(undefinedResponse)
 
 inputSearch.addEventListener('keyup', (e) => {
         let value = inputSearch.value
+        value === '' ? hide(listSearch) : show(listSearch)
         const correctText = inputSearch.value[0].toUpperCase()
         inputSearch.value = inputSearch.value.replace(inputSearch.value[0], correctText)
         removeListItem()
         for (let i of sortedNames) {
-            if (i.toLowerCase().includes(value.toLowerCase())
+            if (i.toLowerCase().startsWith(value.toLowerCase())
                 && value !== '') {
-
                 let listItem = document.createElement('li')
                 listItem.classList.add('list__item')
                 listItem.setAttribute("onclick", "displayNames('" + i + "')")
@@ -52,8 +52,6 @@ inputSearch.addEventListener('keyup', (e) => {
 
                 listItem.onclick = (e) => {
                     onSearch(e.target.innerHTML)
-                    // inputSearch.value = e.target.innerHTML
-                    // inputSearch.value =''
                 }
 
                 listItem.innerHTML = name

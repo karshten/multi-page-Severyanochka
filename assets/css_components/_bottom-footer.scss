@@ -2,6 +2,22 @@
   display: none;
 }
 
+@media (max-width:1208px) {
+  .bottom-menu {
+    & .account__authorized {
+
+      & span {
+        display: none;
+      }
+
+      & .arrow {
+        max-width: 20px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .bottom-menu {
     display: block;
