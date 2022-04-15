@@ -1,3 +1,7 @@
+import
+{ProductItem}
+    from "./render.js";
+
 const signInBtn = document.querySelectorAll('.sign-in-btn')
 const signInModalForm = document.querySelector('.sign-in-modalJS')
 
@@ -32,5 +36,21 @@ document.body.addEventListener('keydown', (e) => {
     }
 })
 
+const sectionContent = document.querySelectorAll('.section__content')
+const data = async () => {
+    const response = await fetch('http://localhost:3000/products-items')
+    const result = await response.json()
+    console.log(result)
 
-// lat: 42.8769795, lng: 74.5218206 
+    const item = new ProductItem(
+        result[2].img,
+        result[2].price,
+        result[2].stockPercent,
+        result[2].isStock,
+        result[2].defaultPrice,
+        result[2].title,
+        result[2].stars
+)
+    item.render(sectionContent)
+}
+data()

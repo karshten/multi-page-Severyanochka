@@ -1,0 +1,49 @@
+{
+  "products-items": [
+    {
+      "img": "assets/images/milk.svg",
+      "price": 79.45,
+      "stockPercent": 50,
+      "isStock": true,
+      "defaultPrice": 158.9,
+      "title": "Молоко ПРОСТОКВАШИНО паст. питьевое цельное...",
+      "stars": "star"
+    },
+    {
+      "img": "assets/images/pancackes.png",
+      "price": 161,
+      "stockPercent": 30,
+      "isStock": true,
+      "defaultPrice": 230,
+      "title": "Г/Ц Блинчики с мясом вес, Россия",
+      "stars": "star"
+    },
+    {
+      "img": "assets/images/meat.png",
+      "price": 10,
+      "stockPercent": 10,
+      "isStock": true,
+      "defaultPrice": 432,
+      "title": "Молоко ПРОСТОКВАШИНО паст. питьевое цельное...",
+      "stars": "star"
+    },
+    {
+      "img": "assets/images/sosuage.svg",
+      "price": 79.45,
+      "stockPercent": 50,
+      "isStock": false,
+      "defaultPrice": 158.9,
+      "title": "Молоко ПРОСТОКВАШИНО паст. питьевое цельное...",
+      "stars": "star"
+    },
+    {
+      "img": "assets/images/dorblu.svg",
+      "price": 39.6,
+      "stockPercent": 20,
+      "isStock": true,
+      "defaultPrice": 198,
+      "title": "Молоко ПРОСТОКВАШИНО паст. питьевое цельное...",
+      "stars": "star"
+    }
+  ]
+}

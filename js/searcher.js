@@ -50,8 +50,9 @@ inputSearch.addEventListener('keyup', (e) => {
                 name += i.substr(value.length)
 
 
-                listItem.onclick = (e) => {
-                    onSearch(e.target.innerHTML)
+                listItem.onclick = (event) => {
+                    // value = e.target.innerHTML
+                    sortedNames.includes(value) ? onFined(e.target.innerHTML) : onUndefined(e.target.innerHTML)
                 }
 
                 listItem.innerHTML = name

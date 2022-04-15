@@ -37,8 +37,7 @@
       left: 10px;
       width: 150px;
       padding: 12px 0;
-      background: $light-green;
-      border: none;
+      @include btn-styles($light-green, none, 4px, 12px 0);
 
       &:hover {
         background: $green;

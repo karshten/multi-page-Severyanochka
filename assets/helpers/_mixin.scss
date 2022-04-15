@@ -10,3 +10,11 @@
     font-weight: $fw;
     color: $color;
 }
+
+@mixin btn-styles ($background, $border, $border-radius, $padding){
+  background: $background;
+  border: $border;
+  border-radius: $border-radius;
+  padding: $padding;
+  cursor: pointer;
+}

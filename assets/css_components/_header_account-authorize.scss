@@ -6,19 +6,19 @@
       @include flex(flex, start, center);
     }
 
+    & img {
+      height: 30px;
+    }
+
     & .hide {
       display: none;
     }
 
     & .account__btn {
-      background: $orange;
-      padding: 8px 20px 8px 40px;
       @include flex(flex, space-between, center);
+      @include btn-styles($orange, 1px solid $orange, 4px, 8px 20px 8px 40px);
       color: #fff;
-      border-radius: 4px;
-      cursor: pointer;
       transition: .4s ease-in-out;
-      border: 1px solid $orange;
 
       &:hover {
         background: $light-orange;
@@ -85,15 +85,13 @@
 
       & .bottomContent__passwordLink {
         width: 50%;
-        font-size: 12px;
-        color: $darkGrey;
+        @include text_styles(0, 12px, 400, $darkGrey);
         @include flex(flex, flex-end, center)
       }
 
       & .dialog__inputLable {
         text-align: start;
-        font-size: 18px;
-        color: $gray;
+        @include text_styles(0, 18px, 400, $gray);
       }
 
       & .dialog__phone-input-content {

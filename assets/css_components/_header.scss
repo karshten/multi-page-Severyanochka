@@ -26,12 +26,8 @@
 
   & .header__catalog {
     @include flex(flex, space-between, center);
-    background: $green;
-    padding: 11px 16px 11px 16px;
-    border-radius: 4px;
-    cursor: pointer;
+    @include btn-styles($green, 1px solid $green, 4px, 11px 16px 11px 16px);
     margin-right: 16px;
-    border: 1px solid $green;
     transition: .4s ease-in-out;
 
     &:hover {

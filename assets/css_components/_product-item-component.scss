@@ -30,10 +30,8 @@
   position: absolute;
   top: 40%;
   left: 8px;
-  background: $orange;
   width: 56px;
-  padding: 4px 8px;
-  border-radius: 4px;
+  @include btn-styles($orange, none, 4px, 4px 8px);
   color: #fff;
 }
 

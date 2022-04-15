@@ -11,13 +11,11 @@
     }
 
     & .location-content__item {
-      background: #F3F2F1;
       font-size: 14px;
-      padding: 8px 12px 6px;
-      border-radius: 4px;
       margin-right: 24px;
       transition: .3s ease-in-out;
       margin-bottom: 24px;
+      @include btn-styles(#f3f2f1, none, 4px, 8px 12px 6px);
 
       &:hover {
         background: $green;
