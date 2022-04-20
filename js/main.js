@@ -1,5 +1,5 @@
 import
-{ProductItem}
+{ProductItem, contentResponse}
     from "./render.js";
 
 const signInBtn = document.querySelectorAll('.sign-in-btn')
@@ -40,17 +40,21 @@ const sectionContent = document.querySelectorAll('.section__content')
 const data = async () => {
     const response = await fetch('http://localhost:3000/products-items')
     const result = await response.json()
-    console.log(result)
-
-    const item = new ProductItem(
-        result[2].img,
-        result[2].price,
-        result[2].stockPercent,
-        result[2].isStock,
-        result[2].defaultPrice,
-        result[2].title,
-        result[2].stars
-)
-    item.render(sectionContent)
+    let resultForSectionContent = result
+    if (resultForSectionContent.length > 4){
+        resultForSectionContent.splice(4)
+    }
+    for (let obj of resultForSectionContent) {
+        const item = new ProductItem(
+            obj.img,
+            obj.price,
+            obj.stockPercent,
+            obj.isStock,
+            obj.defaultPrice,
+            obj.title,
+            obj.stars
+        )
+        item.render(sectionContent)
+    }
 }
 data()

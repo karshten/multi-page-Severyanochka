@@ -33,7 +33,6 @@ export class ProductItem {
 
     render(section) {
         const productItem = document.createElement('div')
-
         productItem.innerHTML = `
         <div class="item-product">
             <img class="favorite-btn" src="assets/icons/favorite.svg" alt="toFavorites">
@@ -44,7 +43,7 @@ export class ProductItem {
             <div class="product__content">
                 <div class="product__price">
                     <div class="price__cart__content">
-                        <h4 class="cart__price">${this.defaultPrice - (this.defaultPrice * this.stockPercent/100) } ₽</h4>
+                        <h4 class="cart__price">${this.defaultPrice - (this.defaultPrice * this.stockPercent / 100)} ₽</h4>
                         <p class="${this.isStock ? "" : "hide"}">С картой</p>
                     </div>
                     <div class=" ${this.isStock ? "price__default" : "hide"}">
@@ -65,8 +64,8 @@ export class ProductItem {
 </div>`
 
         for (let elem of section) {
-            console.log(elem)
             elem.innerHTML += productItem.innerHTML
         }
+        contentResponse.innerHTML+=productItem.innerHTML
     }
 }

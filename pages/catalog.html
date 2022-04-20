@@ -12,7 +12,9 @@
 <header class="header">
     <div class="container">
         <div class="header__logo">
-            <img class="logo__img" src="../assets/icons/logo.svg" alt="logo">
+            <a href="../index.html">
+                <img class="logo__img" src="../assets/icons/logo.svg" alt="logo">
+            </a>
             <a href="../index.html">СЕВЕРЯНОЧКА</a>
         </div>
         <div class="header__catalog">
@@ -71,6 +73,31 @@
 </header>
 <section class="main_catalog">
     <div class="container">
+        <div class="catalog__modal hide">
+            <ul class="modal__list">
+                <li class="modal__item">
+                    <a href="" class="item__link">Молоко, сыр, яйцо</a>
+                    <a href="" class="item__link">Хлеб</a>
+                    <a href="" class="item__link">Фрукты и овощи</a>
+                    <a href="" class="item__link">Замороженные продукты</a>
+                </li>
+                <li class="modal__item">
+                    <a href="" class="item__link">Напитки</a>
+                    <a href="" class="item__link">Кондитерские изделия</a>
+                    <a href="" class="item__link">Чай, кофе</a>
+                </li>
+                <li class="modal__item">
+                    <a href="" class="item__link">Бакалея</a>
+                    <a href="" class="item__link">Здоровое питание</a>
+                    <a href="" class="item__link">Зоотовары</a>
+                </li>
+                <li class="modal__item">
+                    <a href="" class="item__link">Непродовольственные товары</a>
+                    <a href="" class="item__link">Детское питание</a>
+                    <a href="" class="item__link">Мясо, птица, колбаса</a>
+                </li>
+            </ul>
+        </div>
         <ul class="link-list">
             <li class="li list__link-another-page">
                 <a href="../index.html">Главная</a>
@@ -87,10 +114,10 @@
     <div class="container">
         <h2 class="section__title">Результат поиска по запросу</h2>
         <p class="response__label-about">по запросу
-            <span class="label-about__name">уйуцу</span>
+            <span class="label-about__name"></span>
         </p>
         <h2 class="section__title undefined-title">Ничего не найдено</h2>
-        <div class="section__content">
+        <div class="catalog-response__content">
             <section class="product_pict">
                 <div class="container">
                     <div class="product_content">
@@ -222,7 +249,7 @@
                 <div class="img_catalog">
                     <img src="../assets/images/soap-washer.png" alt="washer-items" class="square">
                     <span class="green_linear"><a href=""
-                                                  class="href_picture_content">Непродовольственные товары</a></span>
+                                                  class="href_picture_content">Непродоволь  ственные товары</a></span>
                 </div>
             </div>
         </div>
@@ -258,7 +285,7 @@
 <section class="bottom-menu">
     <div class="container">
         <ul class="menu">
-            <li class="menu__item">
+            <li class="menu__item header__catalog">
                 <div class="item__burger">
                     <div class="burger__line"></div>
                 </div>
@@ -284,7 +311,8 @@
         </ul>
     </div>
 </section>
-<script src="../js/main.js"></script>
+<script type="module" src="../js/main.js"></script>
 <script type="module" src="../js/searcher.js"></script>
+<script type="module" src="../js/catalog.js"></script>
 </body>
 </html>

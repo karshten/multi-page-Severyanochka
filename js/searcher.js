@@ -5,35 +5,18 @@ import
 }
     from "./render.js";
 
-let catalogNames = [
-    'Молоко',
-    'Колбаса',
-    'Мясо',
-    'Овощи',
-    'Напитки',
-    'Непродовольственные товары',
-    'Кондитерское изделие',
-    'Сладкое',
-    'Хлеб',
-    'Здоровое питание',
-    'Детское питание',
-    'Зоотовары',
-    'Блинчики',
-    'Творог',
-    'Сгущеное молоко',
-    'Чай',
-    'Кофе',
-    'Масло сливочное',
-    'Еда',
-]
+const data = async () => {
+    const response = await fetch(`http://localhost:3000/catalogNames`)
+    const data = await response.json()
+    console.log(data)
 
-const sortedNames = catalogNames.sort()
-const inputSearch = document.querySelector('.search__input')
-const listSearch = document.querySelector('.content__list')
-const btnSearch = document.querySelector('.searchBtn')
-hide(undefinedResponse)
+    const sortedNames = data.sort()
+    const inputSearch = document.querySelector('.search__input')
+    const listSearch = document.querySelector('.content__list')
+    const btnSearch = document.querySelector('.searchBtn')
+    hide(undefinedResponse)
 
-inputSearch.addEventListener('keyup', (e) => {
+    inputSearch.addEventListener('keyup', (e) => {
         let value = inputSearch.value
         value === '' ? hide(listSearch) : show(listSearch)
         const correctText = inputSearch.value[0].toUpperCase()
@@ -51,8 +34,7 @@ inputSearch.addEventListener('keyup', (e) => {
 
 
                 listItem.onclick = (event) => {
-                    // value = e.target.innerHTML
-                    sortedNames.includes(value) ? onFined(e.target.innerHTML) : onUndefined(e.target.innerHTML)
+                    onFined(event.target.innerHTML)
                 }
 
                 listItem.innerHTML = name
@@ -71,44 +53,45 @@ inputSearch.addEventListener('keyup', (e) => {
             }
             e.code === 'Enter' && value !== '' ? onUndefined(value) : NaN
         }
-    }
-)
-
-function onUndefined(value) {
-    onSearch(value)
-    show(undefinedResponse)
-    hide(contentResponse)
-    contentResponse.classList.remove('section__content')
-}
-
-function onFined(value) {
-    onSearch(value)
-    hide(undefinedResponse)
-    show(contentResponse)
-    contentResponse.classList.add('section__content')
-}
-
-function displayNames(value) {
-    inputSearch.value = value
-    removeListItem()
-}
-
-function removeListItem() {
-    document.querySelectorAll(".list__item").forEach((item) => {
-        item.remove()
     })
-}
 
-function onSearch(value) {
-    const correctText = inputSearch.value[0].toUpperCase()
-    inputSearch.value = inputSearch.value.replace(inputSearch.value[0], correctText)
-    inputSearch.value = ''
-    removeListItem()
-    hide(mainPageContent)
-    show(sectionResponse)
-    showFade(sectionResponse)
-    setTimeout(() => {
-        hideFade(sectionResponse)
-    }, 500)
-    labelResponse.innerHTML = value
+    function onUndefined(value) {
+        onSearch(value)
+        show(undefinedResponse)
+        hide(contentResponse)
+        contentResponse.classList.remove('section__content')
+    }
+
+    function onFined(value) {
+        onSearch(value)
+        hide(undefinedResponse)
+        show(contentResponse)
+        contentResponse.classList.add('section__content')
+    }
+
+    function displayNames(value) {
+        inputSearch.value = value
+        removeListItem()
+    }
+
+    function removeListItem() {
+        document.querySelectorAll(".list__item").forEach((item) => {
+            item.remove()
+        })
+    }
+
+    function onSearch(value) {
+        const correctText = inputSearch.value[0].toUpperCase()
+        inputSearch.value = inputSearch.value.replace(inputSearch.value[0], correctText)
+        inputSearch.value = ''
+        removeListItem()
+        hide(mainPageContent)
+        show(sectionResponse)
+        showFade(sectionResponse)
+        setTimeout(() => {
+            hideFade(sectionResponse)
+        }, 500)
+        labelResponse.innerHTML = value
+    }
 }
+data()

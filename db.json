@@ -1,49 +1,91 @@
 {
   "products-items": [
     {
+      "id": 1,
       "img": "assets/images/milk.svg",
       "price": 79.45,
       "stockPercent": 50,
       "isStock": true,
       "defaultPrice": 158.9,
       "title": "Молоко ПРОСТОКВАШИНО паст. питьевое цельное...",
-      "stars": "star"
+      "stars": "star",
+      "category": "Молоко Сыр Яйца"
     },
     {
+      "id": 2,
       "img": "assets/images/pancackes.png",
       "price": 161,
       "stockPercent": 30,
-      "isStock": true,
+      "isStock": false,
       "defaultPrice": 230,
       "title": "Г/Ц Блинчики с мясом вес, Россия",
-      "stars": "star"
+      "stars": "star",
+      "category": "Еда Блинчики"
     },
     {
+      "id": 3,
       "img": "assets/images/meat.png",
       "price": 10,
       "stockPercent": 10,
       "isStock": true,
       "defaultPrice": 432,
       "title": "Молоко ПРОСТОКВАШИНО паст. питьевое цельное...",
-      "stars": "star"
+      "stars": "star",
+      "category": "milk eggs cheese"
     },
     {
+      "id": 4,
       "img": "assets/images/sosuage.svg",
       "price": 79.45,
       "stockPercent": 50,
       "isStock": false,
       "defaultPrice": 158.9,
       "title": "Молоко ПРОСТОКВАШИНО паст. питьевое цельное...",
-      "stars": "star"
+      "stars": "star",
+      "category": "milk eggs cheese"
     },
     {
-      "img": "assets/images/dorblu.svg",
-      "price": 39.6,
-      "stockPercent": 20,
-      "isStock": true,
-      "defaultPrice": 198,
+      "id": 4,
+      "img": "assets/images/sosuage.svg",
+      "price": 79.45,
+      "stockPercent": 50,
+      "isStock": false,
+      "defaultPrice": 158.9,
       "title": "Молоко ПРОСТОКВАШИНО паст. питьевое цельное...",
-      "stars": "star"
+      "stars": "star",
+      "category": "milk eggs cheese"
+    },
+    {
+      "id": 5,
+      "img": "assets/images/sosuage.svg",
+      "price": 79.45,
+      "stockPercent": 50,
+      "isStock": false,
+      "defaultPrice": 158.9,
+      "title": "Молоко ПРОСТОКВАШИНО паст. питьевое цельное...",
+      "stars": "star",
+      "category": "milk eggs cheese"
     }
+  ],
+  "catalogNames": [
+    "Молоко",
+    "Колбаса",
+    "Мясо",
+    "Овощи",
+    "Напитки",
+    "Непродовольственные товары",
+    "Кондитерское изделие",
+    "Сладкое",
+    "Хлеб",
+    "Здоровое питание",
+    "Детское питание",
+    "Зоотовары",
+    "Блинчики",
+    "Творог",
+    "Сгущеное молоко",
+    "Чай",
+    "Кофе",
+    "Масло сливочное",
+    "Еда"
   ]
 }
