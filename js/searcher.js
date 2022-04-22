@@ -8,7 +8,6 @@ import
 const data = async () => {
     const response = await fetch(`http://localhost:3000/catalogNames`)
     const data = await response.json()
-    console.log(data)
 
     const sortedNames = data.sort()
     const inputSearch = document.querySelector('.search__input')

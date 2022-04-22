@@ -17,7 +17,7 @@
       cursor: pointer;
     }
 
-    & a {
+    & .logo__text {
       color: $black;
       font-weight: 700;
       font-size: 14px;
@@ -122,6 +122,10 @@
   .header {
 
     & .header__catalog {
+      display: none;
+    }
+
+    & .logo__text {
       display: none;
     }
   }

@@ -13,7 +13,7 @@
     <div class="container">
         <div class="header__logo">
             <a href="index.html"><img class="logo__img" src="assets/icons/logo.svg" alt="logo"></a>
-            <a href="index.html">СЕВЕРЯНОЧКА</a>
+            <a class="logo__text" href="index.html">СЕВЕРЯНОЧКА</a>
         </div>
         <a class="header__catalog" href='pages/catalog.html'>
             <div class="catalog__burger"></div>
@@ -90,7 +90,8 @@
     <section class="stocks">
         <div class="container">
             <h2 class="section__title">Акции</h2>
-            <a class="show-all" href="" target="_blank">Все акции <img class="-right" src="assets/icons/arrow.svg" alt=""></a>
+            <a class="show-all" href="" target="_blank">Все акции <img class="-right" src="assets/icons/arrow.svg"
+                                                                       alt=""></a>
             <div class="section__content stocks__section"></div>
         </div>
     </section>
@@ -153,43 +154,21 @@
         <div class="container">
             <a class="show-all" href="">Все статьи<img class="-right" src="assets/icons/arrow.svg" alt=""></a>
             <h2 class="section__title">Статья</h2>
-
             <ul class="articles__content">
-                <li class="content__item">
-                    <img class="item__img" src="assets/images/warning.jpg" alt="warning">
-                    <div class="item__text">
-                        <p class="text__date">05.03.2021</p>
-                        <h4 class="text__title">Режим использования масок и перчаток на территории магазинов</h4>
-                        <p class="text__main">Подробная информация о режимах использования масок и перчаток на
-                            территории
-                            магазинов "ЛЕНТА". Информация обновляется каждый будний день.</p>
-                        <div class="basket-btn"><a href="">Подробнее</a></div>
-                    </div>
-                </li>
-                <li class="content__item">
-                    <img class="item__img" src="assets/images/nature.jpg" alt="nature">
-                    <div class="item__text">
-                        <p class="text__date">05.03.2021</p>
-                        <h4 class="text__title">Весеннее настроение для каждой</h4>
-                        <p class="text__main">8 Марта – это не просто Международный женский день, это ещё день
-                            тюльпанов,
-                            приятных сюрпризов и праздничных тёплых пожеланий</p>
 
-                        <div class="basket-btn"><a href="">Подробнее</a></div>
-                    </div>
-                </li>
-                <li class="content__item">
-                    <img class="item__img" src="assets/images/health-food.jpg" alt="health-food">
-                    <div class="item__text">
-                        <p class="text__date">05.03.2021</p>
-                        <h4 class="text__title">Режим использования масок и перчаток на территории магазинов</h4>
-                        <p class="text__main">Подробная информация о режимах использования масок и перчаток на
-                            территории
-                            магазинов "ЛЕНТА". Информация обновляется каждый будний день.</p>
-                        <div class="basket-btn"><a href="">Подробнее</a></div>
-                    </div>
-                </li>
             </ul>
+        </div>
+        <div class="articles__modal modal hide">
+            <div class="container">
+                <div class="modal__dialog--content">
+                    <img src="" alt="" class="modal__img">
+                    <div class="modal__text--wrapper">
+                        <h2 class="modal__title"></h2>
+                        <p class="modal__date--wrapper">Написано :<span class="modal__date"></span></p>
+                        <p class="modal__main"></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 </main>

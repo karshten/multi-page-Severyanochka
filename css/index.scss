@@ -1,5 +1,4 @@
 @import "../assets/fonts/fonts.css";
-@import "../assets/css_components/components";
 @import "../assets/helpers/variables";
 @import "../assets/helpers/mixin";
 @import "../assets/css_components/header";
@@ -15,6 +14,7 @@
 @import "../assets/css_components/bottom-footer";
 @import "../assets/css_components/catalog/main_catalog";
 @import "../assets/css_components/catalog/product_pict";
+@import "../assets/css_components/components";
 
 * {
   margin: 0;
