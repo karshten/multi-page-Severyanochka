@@ -22,7 +22,7 @@ const hideModalOnEvent = (modal, modalClass) => {
     })
 }
 
-// hideModalOnEvent(signInModalForm, 'sign-in-modal')
+hideModalOnEvent(signInModalForm, 'sign-in-modal')
 
 signInBtn.forEach((btn) => {
     btn.onclick = () => {
