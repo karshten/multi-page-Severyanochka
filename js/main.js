@@ -11,6 +11,7 @@ const showModal = (modal, modalClass) => {
 
 const hideModal = (modal, modalClass) => {
     modal.classList.replace(modalClass, 'hide')
+    document.body.style.overflow = 'scroll'
 }
 
 const hideModalOnEvent = (modal, modalClass) => {
@@ -21,11 +22,11 @@ const hideModalOnEvent = (modal, modalClass) => {
     })
 }
 
-hideModalOnEvent(signInModalForm, 'sign-in-modalJS')
+// hideModalOnEvent(signInModalForm, 'sign-in-modal')
 
 signInBtn.forEach((btn) => {
     btn.onclick = () => {
-        showModal(signInModalForm, 'sign-in-modalJS')
+        showModal(signInModalForm, 'sign-in-modal')
         document.body.style.overflow = 'hidden'
     }
 })
