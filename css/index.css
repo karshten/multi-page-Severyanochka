@@ -1,14 +1,37 @@
 @import "../assets/fonts/fonts.css";
+.header .header__account, .menu__account .header__account {
+  margin-left: 24px;
+}
 .header .header__account .account__authorized, .menu__account .header__account .account__authorized {
+  padding: 10px;
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
-.header .header__account img, .menu__account .header__account img {
-  height: 30px;
+.header .header__account .account__dropDown--menu, .menu__account .header__account .account__dropDown--menu {
+  padding: 10px 10px 0 10px;
+  position: absolute;
+  width: 100%;
+  top: 105%;
+  right: 0;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 4px 3px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
 }
-.header .header__account .hide, .menu__account .header__account .hide {
-  display: none;
+.header .header__account .dropDown--menu__item, .menu__account .header__account .dropDown--menu__item {
+  margin-bottom: 12px;
+}
+.header .header__account .dropDown--menu__item a, .menu__account .header__account .dropDown--menu__item a {
+  color: #414141;
+}
+.header .header__account .dropDown--menu__item a:hover, .menu__account .header__account .dropDown--menu__item a:hover {
+  color: #FF6633;
 }
 .header .header__account .account__btn, .menu__account .header__account .account__btn {
   display: flex;
@@ -29,106 +52,17 @@
 .header .header__account .btn__log-in, .menu__account .header__account .btn__log-in {
   margin-left: 35px;
 }
-.header .header__account span, .menu__account .header__account span {
+.header .header__account h5, .menu__account .header__account h5 {
   margin: 0 23px 0 10px;
-}
-.header .sign-in-modal, .menu__account .sign-in-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  background: rgba(252, 213, 186, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header .sign-in-modal .section__title, .menu__account .sign-in-modal .section__title {
-  font-size: 24px;
-}
-.header .sign-in-modal .sign-in-modal__dialog, .menu__account .sign-in-modal .sign-in-modal__dialog {
-  z-index: 3;
-  padding-top: 72px;
-  flex-direction: column;
-  width: 420px;
-  height: 430px;
-  background: #fff;
-  text-align: center;
-}
-.header .sign-in-modal .sign-in-modal__dialog .dialog__container, .menu__account .sign-in-modal .sign-in-modal__dialog .dialog__container {
-  max-width: 260px;
-  margin: 0 auto;
-}
-.header .sign-in-modal .sign-in-modal__dialog .basket-btn-light, .menu__account .sign-in-modal .sign-in-modal__dialog .basket-btn-light {
-  margin-top: 32px;
-  padding: 20px 0;
-  width: 100%;
-  font-size: 24px;
-}
-.header .sign-in-modal .sign-in-modal__dialog .dialog__bottom_content, .menu__account .sign-in-modal .sign-in-modal__dialog .dialog__bottom_content {
-  margin-top: 32px;
-  display: flex;
-  width: 100%;
-}
-.header .sign-in-modal .sign-in-modal__dialog .basket-btn, .menu__account .sign-in-modal .sign-in-modal__dialog .basket-btn {
-  width: 50%;
-  padding: 7px 20px;
-  font-size: 12px;
-  margin-right: 24px;
-}
-.header .sign-in-modal .sign-in-modal__dialog .bottomContent__passwordLink, .menu__account .sign-in-modal .sign-in-modal__dialog .bottomContent__passwordLink {
-  width: 50%;
-  margin-bottom: 0;
-  font-size: 12px;
   font-weight: 400;
-  color: #606060;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
-.header .sign-in-modal .sign-in-modal__dialog .dialog__inputLable, .menu__account .sign-in-modal .sign-in-modal__dialog .dialog__inputLable {
-  text-align: start;
-  margin-bottom: 0;
-  font-size: 18px;
-  font-weight: 400;
-  color: #8f8f8f;
-}
-.header .sign-in-modal .sign-in-modal__dialog .dialog__phone-input-content, .menu__account .sign-in-modal .sign-in-modal__dialog .dialog__phone-input-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #70C05B;
-  width: 100%;
-  height: 60px;
-  outline: none;
-}
-.header .sign-in-modal .sign-in-modal__dialog #phone__select, .menu__account .sign-in-modal .sign-in-modal__dialog #phone__select {
-  height: 80%;
-  max-width: 34%;
-  outline: none;
-  padding-left: 16px;
-  margin-right: 4px;
-  border: none;
-  font-size: 16px;
-}
-.header .sign-in-modal .sign-in-modal__dialog #phone__select option, .menu__account .sign-in-modal .sign-in-modal__dialog #phone__select option {
-  font-size: 16px;
-}
-.header .sign-in-modal .sign-in-modal__dialog .phone__input, .menu__account .sign-in-modal .sign-in-modal__dialog .phone__input {
-  border: none;
-  outline: none;
-  width: 66%;
-  height: 80%;
-  font-size: 16px;
-  padding: 0 4px 0 16px;
-  margin-right: 4px;
-  border-left: 2px solid #70C05B;
+.header .header__account .hide, .menu__account .header__account .hide {
+  display: none;
 }
 
 @media (max-width: 1208px) {
-  .header .header__account .account__authorized span {
-    display: none;
+  .header .header__account {
+    margin-left: auto;
   }
   .header .header__account .account__authorized .arrow {
     margin-left: 10px;
@@ -141,28 +75,26 @@
     margin-left: 0;
   }
 }
+@media (max-width: 1080px) {
+  .header__account .account__authorized span {
+    display: none;
+  }
+}
+@media (max-width: 950px) {
+  .account__name {
+    display: none;
+  }
+
+  .logo__text {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .header .header__account {
     display: none;
   }
-  .header .sign-in-modal .sign-in-modal__dialog {
-    padding-top: 40px;
-    width: 300px;
-    height: 360px;
-  }
-  .header .sign-in-modal #phone__select {
-    height: 80%;
-    max-width: 34%;
-    outline: none;
-    padding-left: 16px;
-    margin-right: 4px;
-    border: none;
-    font-size: 16px;
-  }
-  .header .sign-in-modal #phone__select option {
-    font-size: 16px;
-    width: 50%;
-    height: 50%;
+  .header .logo__text {
+    display: block;
   }
 }
 .header {
@@ -172,6 +104,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 .header .header__logo {
   display: flex;
@@ -184,9 +117,11 @@
   cursor: pointer;
 }
 .header .header__logo .logo__text {
-  color: #414141;
-  font-weight: 700;
+  margin-left: 10px;
+  margin-bottom: 0;
   font-size: 14px;
+  font-weight: 700;
+  color: #414141;
 }
 .header .header__catalog {
   display: flex;
@@ -238,6 +173,16 @@
   transition: 0.4s ease-in-out;
 }
 
+@media (max-width: 1208px) {
+  .header .header__logo {
+    margin-right: 25px;
+  }
+}
+@media (max-width: 1080px) {
+  .header .container {
+    flex-wrap: nowrap;
+  }
+}
 @media (max-width: 950px) {
   .header .header__logo {
     margin-right: 15px;
@@ -349,6 +294,19 @@
   font-weight: 400;
 }
 
+@media (max-width: 1080px) {
+  .header .header__search__content {
+    margin-right: 15px;
+  }
+  .header .header__search__content .header__search {
+    width: 250px;
+  }
+}
+@media (max-width: 950px) {
+  .header .header__search__content .header__search {
+    width: 375px;
+  }
+}
 @media (max-width: 768px) {
   .header .menu {
     display: none;
@@ -986,6 +944,9 @@
     max-width: 224px;
     margin-right: 0;
   }
+  .articles .articles__content .item__img {
+    height: 120px;
+  }
   .articles .articles__content .text__date {
     font-size: 10px;
   }
@@ -1360,6 +1321,121 @@
     margin: 0 16px 14px 0;
   }
 }
+.sign-in-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(252, 213, 186, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign-in-modal .section__title {
+  font-size: 24px;
+}
+.sign-in-modal .sign-in-modal__dialog {
+  z-index: 3;
+  padding-top: 72px;
+  flex-direction: column;
+  width: 420px;
+  height: 430px;
+  background: #fff;
+  text-align: center;
+}
+.sign-in-modal .sign-in-modal__dialog .dialog__container {
+  max-width: 260px;
+  margin: 0 auto;
+}
+.sign-in-modal .sign-in-modal__dialog .basket-btn-light {
+  margin-top: 32px;
+  padding: 20px 0;
+  width: 100%;
+  font-size: 24px;
+}
+.sign-in-modal .sign-in-modal__dialog .dialog__bottom_content {
+  margin-top: 32px;
+  display: flex;
+  width: 100%;
+}
+.sign-in-modal .sign-in-modal__dialog .basket-btn {
+  width: 50%;
+  padding: 7px 20px;
+  font-size: 12px;
+  margin-right: 24px;
+}
+.sign-in-modal .sign-in-modal__dialog .bottomContent__passwordLink {
+  width: 50%;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: 400;
+  color: #606060;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.sign-in-modal .sign-in-modal__dialog .dialog__inputLable {
+  text-align: start;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #8f8f8f;
+}
+.sign-in-modal .sign-in-modal__dialog .dialog__phone-input-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #70C05B;
+  width: 100%;
+  height: 60px;
+  outline: none;
+}
+.sign-in-modal .sign-in-modal__dialog #phone__select {
+  height: 80%;
+  max-width: 34%;
+  outline: none;
+  padding-left: 16px;
+  margin-right: 4px;
+  border: none;
+  font-size: 16px;
+}
+.sign-in-modal .sign-in-modal__dialog #phone__select option {
+  font-size: 16px;
+}
+.sign-in-modal .sign-in-modal__dialog .phone__input {
+  border: none;
+  outline: none;
+  width: 66%;
+  height: 80%;
+  font-size: 16px;
+  padding: 0 4px 0 16px;
+  margin-right: 4px;
+  border-left: 2px solid #70C05B;
+}
+
+@media (max-width: 768px) {
+  .sign-in-modal .sign-in-modal__dialog {
+    padding-top: 40px;
+    width: 300px;
+    height: 360px;
+  }
+  .sign-in-modal #phone__select {
+    height: 80%;
+    max-width: 34%;
+    outline: none;
+    padding-left: 16px;
+    margin-right: 4px;
+    border: none;
+    font-size: 16px;
+  }
+  .sign-in-modal #phone__select option {
+    font-size: 16px;
+    width: 50%;
+    height: 50%;
+  }
+}
 .container {
   position: relative;
   max-width: 1208px;
@@ -1433,7 +1509,7 @@
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  margin-right: 24px;
+  margin-left: 24px;
 }
 .menu a {
   margin-top: 10px;
@@ -1463,6 +1539,11 @@
 @media (max-width: 1080px) {
   .container {
     max-width: 920px;
+  }
+
+  .menu .menu__item {
+    margin-right: 18px;
+    margin-left: 0;
   }
 }
 @media (max-width: 950px) {

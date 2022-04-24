@@ -54,7 +54,7 @@
   & .menu__item {
     @include flex(flex, start, center);
     flex-direction: column;
-    margin-right: 24px;
+    margin-left: 24px;
   }
 
   & a {
@@ -86,6 +86,13 @@
 @media (max-width: 1080px) {
   .container {
     max-width: 920px;
+  }
+  .menu {
+
+    & .menu__item {
+      margin-right: 18px;
+      margin-left: 0;
+    }
   }
 }
 

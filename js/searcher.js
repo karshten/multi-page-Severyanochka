@@ -1,7 +1,7 @@
 import
 {
     sectionResponse, contentResponse, labelResponse, undefinedResponse, mainPageContent,
-    hide, show, hideFade, showFade
+    hideElem, showElem, hideFade, showFade
 }
     from "./render.js";
 
@@ -13,11 +13,11 @@ const data = async () => {
     const inputSearch = document.querySelector('.search__input')
     const listSearch = document.querySelector('.content__list')
     const btnSearch = document.querySelector('.searchBtn')
-    hide(undefinedResponse)
+    hideElem(undefinedResponse)
 
     inputSearch.addEventListener('keyup', (e) => {
         let value = inputSearch.value
-        value === '' ? hide(listSearch) : show(listSearch)
+        value === '' ? hideElem(listSearch) : showElem(listSearch)
         const correctText = inputSearch.value[0].toUpperCase()
         inputSearch.value = inputSearch.value.replace(inputSearch.value[0], correctText)
         removeListItem()
@@ -56,15 +56,15 @@ const data = async () => {
 
     function onUndefined(value) {
         onSearch(value)
-        show(undefinedResponse)
-        hide(contentResponse)
+        showElem(undefinedResponse)
+        hideElem(contentResponse)
         contentResponse.classList.remove('section__content')
     }
 
     function onFined(value) {
         onSearch(value)
-        hide(undefinedResponse)
-        show(contentResponse)
+        hideElem(undefinedResponse)
+        showElem(contentResponse)
         contentResponse.classList.add('section__content')
     }
 
@@ -84,8 +84,8 @@ const data = async () => {
         inputSearch.value = inputSearch.value.replace(inputSearch.value[0], correctText)
         inputSearch.value = ''
         removeListItem()
-        hide(mainPageContent)
-        show(sectionResponse)
+        hideElem(mainPageContent)
+        showElem(sectionResponse)
         showFade(sectionResponse)
         setTimeout(() => {
             hideFade(sectionResponse)

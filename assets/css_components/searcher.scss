@@ -82,6 +82,21 @@
   }
 }
 
+@media (max-width: 1080px) {
+  .header .header__search__content {
+    margin-right: 15px;
+    & .header__search {
+      width: 250px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .header .header__search__content .header__search {
+    width: 375px;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
 

@@ -4,20 +4,31 @@ export const sectionResponse = document.querySelector('.section__search-response
     undefinedResponse = sectionResponse.querySelector('.undefined-title'),
     mainPageContent = document.querySelector('#main')
 
-export function hide(elem) {
-    elem.classList.add('hide')
-}
-
-export function show(elem) {
-    elem.classList.remove('hide')
-}
-
 export function showFade(elem) {
     elem.classList.add('fade')
 }
 
 export function hideFade(elem) {
     elem.classList.remove('fade')
+}
+
+export const showElem = (elem, elemClass) => {
+    elem.classList.remove('hide')
+    elem.classList.replace('hide', elemClass)
+}
+
+export const hideElem = (elem, elemClass) => {
+    elem.classList.add('hide')
+    elem.classList.replace(elemClass, 'hide')
+    document.body.style.overflow = 'scroll'
+}
+
+export const hideElemOnEvent = (elem, elemClass) => {
+    elem.addEventListener('click', (e) => {
+        if (e.target.classList.contains(elemClass)) {
+            hideElem(elem, elemClass)
+        }
+    })
 }
 
 export class ProductItem {
@@ -66,6 +77,6 @@ export class ProductItem {
         for (let elem of section) {
             elem.innerHTML += productItem.innerHTML
         }
-        contentResponse.innerHTML+=productItem.innerHTML
+        contentResponse.innerHTML += productItem.innerHTML
     }
 }

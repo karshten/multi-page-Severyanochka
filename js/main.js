@@ -1,40 +1,25 @@
 import
-{ProductItem, contentResponse}
+{ProductItem, showElem, hideElem, hideElemOnEvent}
     from "./render.js";
 
-const signInBtn = document.querySelectorAll('.sign-in-btn')
-const signInModalForm = document.querySelector('.sign-in-modalJS')
+const dropDownContent = document.querySelector('.account__dropDown--menu'),
+    dropDownBtns = document.querySelectorAll('.dropDown-btn'),
+    dropDownWindow = document.querySelectorAll('.dropDown-window')
+dropDownWindow[1].style.top = '-105%'
 
-const showModal = (modal, modalClass) => {
-    modal.classList.replace('hide', modalClass)
-}
-
-const hideModal = (modal, modalClass) => {
-    modal.classList.replace(modalClass, 'hide')
-    document.body.style.overflow = 'scroll'
-}
-
-const hideModalOnEvent = (modal, modalClass) => {
-    modal.addEventListener('click', (e) => {
-        if (e.target.classList.contains(modalClass)) {
-            hideModal(modal, modalClass)
-        }
-    })
-}
-
-hideModalOnEvent(signInModalForm, 'sign-in-modal')
-
-signInBtn.forEach((btn) => {
+dropDownBtns.forEach((btn, i) => {
+    let clickedBtn = false
     btn.onclick = () => {
-        showModal(signInModalForm, 'sign-in-modal')
-        document.body.style.overflow = 'hidden'
-    }
-})
-
-document.body.addEventListener('keydown', (e) => {
-    if (e.code === "Escape") {
-        hideModal(signInModalForm)
-        document.body.style.overflow = 'scroll'
+        if (clickedBtn === false) {
+            clickedBtn = true
+            showElem(dropDownWindow[i])
+            btn.classList.add('chevrons-left')
+        }
+        else {
+            clickedBtn = false
+            hideElem(dropDownWindow[i])
+            btn.classList.remove('chevrons-left')
+        }
     }
 })
 
@@ -90,12 +75,12 @@ const articleData = async () => {
         modalDate = articleModal.querySelector('.modal__date'),
         modalMain = articleModal.querySelector('.modal__main')
 
-    hideModalOnEvent(articleModal, 'articles__modal')
+    hideElemOnEvent(articleModal, 'articles__modal')
     articleBtns.forEach((btn) => {
         btn.addEventListener('click', async () => {
             const response = await fetch(`http://localhost:3000/articles/${btn.attributes[0].value}`)
             const thisArticle = await response.json()
-            showModal(articleModal, "articles__modal")
+            showElem(articleModal, "articles__modal")
             modalImg.attributes.src.value = thisArticle.articleImg
             modalDate.innerHTML = thisArticle.articleDate
             modalMain.innerHTML = thisArticle.articleContent

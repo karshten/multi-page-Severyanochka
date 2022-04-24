@@ -1,0 +1,120 @@
+.sign-in-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(252, 213, 186, 0.8);
+  @include flex(flex, center, center);
+
+  & .section__title {
+    font-size: 24px;
+  }
+
+  & .sign-in-modal__dialog {
+    z-index: 3;
+    padding-top: 72px;
+    flex-direction: column;
+    width: 420px;
+    height: 430px;
+    background: #fff;
+    text-align: center;
+
+    & .dialog__container {
+      max-width: 260px;
+      margin: 0 auto;
+    }
+
+    & .basket-btn-light {
+      margin-top: 32px;
+      padding: 20px 0;
+      width: 100%;
+      font-size: 24px;
+    }
+
+    & .dialog__bottom_content {
+      margin-top: 32px;
+      display: flex;
+      width: 100%;
+    }
+
+    & .basket-btn {
+      width: 50%;
+      padding: 7px 20px;
+      font-size: 12px;
+      margin-right: 24px;
+    }
+
+    & .bottomContent__passwordLink {
+      width: 50%;
+      @include text_styles(0, 12px, 400, $darkGrey);
+      @include flex(flex, flex-end, center)
+    }
+
+    & .dialog__inputLable {
+      text-align: start;
+      @include text_styles(0, 18px, 400, $gray);
+    }
+
+    & .dialog__phone-input-content {
+      @include flex(flex, space-between, center);
+      border: 1px solid $green;
+      width: 100%;
+      height: 60px;
+      outline: none;
+    }
+
+    & #phone__select {
+      height: 80%;
+      max-width: 34%;
+      outline: none;
+      padding-left: 16px;
+      margin-right: 4px;
+      border: none;
+      font-size: 16px;
+    }
+
+    & #phone__select option {
+      font-size: 16px;
+    }
+
+    & .phone__input {
+      border: none;
+      outline: none;
+      width: 66%;
+      height: 80%;
+      font-size: 16px;
+      padding: 0 4px 0 16px;
+      margin-right: 4px;
+      border-left: 2px solid $green;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sign-in-modal {
+
+    & .sign-in-modal__dialog {
+      padding-top: 40px;
+      width: 300px;
+      height: 360px;
+    }
+
+    & #phone__select {
+      height: 80%;
+      max-width: 34%;
+      outline: none;
+      padding-left: 16px;
+      margin-right: 4px;
+      border: none;
+      font-size: 16px;
+    }
+
+    & #phone__select option {
+      font-size: 16px;
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
