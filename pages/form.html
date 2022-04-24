@@ -9,6 +9,27 @@
     <link rel="stylesheet" href='../css/index.css'>
 </head>
 <body>
-
+<form class="sign-in-modal">
+    <div class="sign-in-modal__dialog">
+        <div class="dialog__container">
+            <h2 class="section__title">Вход</h2>
+            <p class="dialog__inputLable">Телефон</p>
+            <div class="dialog__phone-input-content">
+                <select id="phone__select">
+                    <option value='RU'>+7</option>
+                    <option value="KG">+996</option>
+                </select>
+                <input maxlength="13" placeholder="123 456 78 90" id="phone__input" class="phone__input">
+                <input maxlength="13" placeholder="123 456 78 90" id="name__input" class="phone__input">
+                <input maxlength="13" placeholder="123 456 78 90" id="password__input" class="phone__input">
+            </div>
+            <button class="basket-btn-light"> Вход</button>
+            <div class="dialog__bottom_content">
+                <button class="basket-btn">Регистрация</button>
+                <a class="bottomContent__passwordLink" href="">Забыли пароль?</a>
+            </div>
+        </div>
+    </div>
+</form>
 </body>
 </html>
