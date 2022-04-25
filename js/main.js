@@ -67,20 +67,19 @@ const articleData = async () => {
     }
     const articleBtns = articleSection.querySelectorAll(".basket-btn")
 
-    const articleModal = document.querySelector('.articles__modal'),
-        articleModalDialog = articleModal.querySelector('.modal__dialog--content')
+    const articleModal = document.querySelector('.modal')
 
     const modalImg = articleModal.querySelector('.modal__img'),
         modalTitle = articleModal.querySelector('.modal__title'),
         modalDate = articleModal.querySelector('.modal__date'),
         modalMain = articleModal.querySelector('.modal__main')
 
-    hideElemOnEvent(articleModal, 'articles__modal')
+    hideElemOnEvent(articleModal, 'modal')
     articleBtns.forEach((btn) => {
         btn.addEventListener('click', async () => {
             const response = await fetch(`http://localhost:3000/articles/${btn.attributes[0].value}`)
             const thisArticle = await response.json()
-            showElem(articleModal, "articles__modal")
+            showElem(articleModal, "modal")
             modalImg.attributes.src.value = thisArticle.articleImg
             modalDate.innerHTML = thisArticle.articleDate
             modalMain.innerHTML = thisArticle.articleContent

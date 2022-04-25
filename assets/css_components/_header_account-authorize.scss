@@ -40,6 +40,7 @@
     & .account__btn {
       @include flex(flex, space-between, center);
       @include btn-styles($orange, 1px solid $orange, 4px, 8px 20px 8px 40px);
+      font-size: 12px;
       color: #fff;
       transition: .4s ease-in-out;
 

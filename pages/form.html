@@ -9,27 +9,105 @@
     <link rel="stylesheet" href='../css/index.css'>
 </head>
 <body>
-<form class="sign-in-modal">
-    <div class="sign-in-modal__dialog">
-        <div class="dialog__container">
-            <h2 class="section__title">Вход</h2>
-            <p class="dialog__inputLable">Телефон</p>
-            <div class="dialog__phone-input-content">
-                <select id="phone__select">
-                    <option value='RU'>+7</option>
-                    <option value="KG">+996</option>
-                </select>
-                <input maxlength="13" placeholder="123 456 78 90" id="phone__input" class="phone__input">
-                <input maxlength="13" placeholder="123 456 78 90" id="name__input" class="phone__input">
-                <input maxlength="13" placeholder="123 456 78 90" id="password__input" class="phone__input">
+<header class="header">
+    <div class="container">
+        <div class="header__logo">
+            <a href="../index.html"><img class="logo__img" src="../assets/icons/logo.svg" alt="logo"></a>
+            <a class="logo__text" href="../index.html">СЕВЕРЯНОЧКА</a>
+        </div>
+        <a class="header__catalog" href='catalog.html'>
+            <div class="catalog__burger"></div>
+            <p>Каталог</p>
+        </a>
+        <div class="header__search__content">
+            <div class="header__search">
+                <input class="search__input" type="text" placeholder="Найти товар">
+                <img class="search__img searchBtn" src="../assets/icons/search.svg" alt="loop">
             </div>
-            <button class="basket-btn-light"> Вход</button>
-            <div class="dialog__bottom_content">
-                <button class="basket-btn">Регистрация</button>
-                <a class="bottomContent__passwordLink" href="">Забыли пароль?</a>
+            <ul class="content__list">
+                <!--                <li class="list__item">dadad</li>-->
+                <!--                <li class="list__item">dadad</li>-->
+            </ul>
+        </div>
+        <ul class="menu">
+            <li class="menu__item"><img src="../assets/icons/favorite.svg" alt="favorites"><a href="">Избраное</a></li>
+            <li class="menu__item"><img src="../assets/icons/orders_icon.svg" alt="orders"><a href="">Заказы</a></li>
+            <li class="menu__item"><img src="../assets/icons/shopping-cart.svg" alt="basket"><a href="">Корзина</a></li>
+        </ul>
+    </div>
+</header>
+<div class="wrapper-form">
+    <form class="sign-in-modal">
+        <div class="sign-in-modal__dialog">
+            <div class="dialog__container">
+                <h2 class="section__title">Вход</h2>
+                <p class="dialog__inputLable">Телефон</p>
+                <div class="dialog__phone-input-content">
+                    <select id="phone__select">
+                        <option value='RU'>+7</option>
+                        <option value="KG">+996</option>
+                    </select>
+                    <input maxlength="13" placeholder="123 456 78 90" id="phone__input" class="phone__input">
+                </div>
+                <div class="dialog__phone-input-content">
+                    <input placeholder="Ваше имя" id="name__input" type="text" class="">
+                </div>
+                <div class="dialog__phone-input-content">
+                    <input placeholder="Ваш пароль" id="password__input" type="password" class="">
+                </div>
+
+                <button class="basket-btn-light"> Вход</button>
+                <div class="dialog__bottom_content">
+                    <button class="basket-btn">Регистрация</button>
+                    <a class="bottomContent__passwordLink" href="">Забыли пароль?</a>
+                </div>
             </div>
         </div>
+    </form>
+</div>
+<section class="footer">
+    <div class="container">
+        <img class="footer__logo" src="../assets/icons/footer_logo.svg" alt="logo">
+        <ul class="footer__content">
+            <li class="content__item"><a href="">О компании</a></li>
+            <li class="content__item"><a href="">Контакты</a></li>
+            <li class="content__item"><a href="">Вакансии</a></li>
+            <li class="content__item"><a href="">Статьи</a></li>
+            <li class="content__item"><a href="">Политика обработки персональных данных</a></li>
+        </ul>
+        <ul class="footer__media">
+            <li class="media__item">
+                <a href="https://www.instagram.com/" target="_blank"><img src="../assets/icons/instagram.svg"
+                                                                          alt="inst"></a>
+                <a href="https://vk.com/" target="_blank"><img src="../assets/icons/vkontakte.svg" alt="vk"></a>
+                <a href="https://ru-ru.facebook.com/" target="_blank"><img src="../assets/icons/facebook.svg"
+                                                                           alt="facebook"></a>
+                <a href="https://ok.ru/" target="_blank"><img src="../assets/icons/ok.svg" alt="ok"></a>
+            </li>
+            <li class="media__item">
+                <img src="../assets/icons/phone_icon.svg" alt="phone">
+                <p class="item__number">8 800 777 33 33</p>
+            </li>
+        </ul>
+        <p class="footer__design">Дизайн <img src="../assets/icons/design-logo.svg" alt="design-logo"></p>
     </div>
-</form>
+</section>
+<section class="bottom-menu">
+    <div class="container">
+        <ul class="menu">
+            <li class="menu__item">
+                <div class="item__burger">
+                    <div class="burger__line"></div>
+                </div>
+                <a href="pages/catalog.html">Каталог</a>
+            </li>
+            <li class="menu__item"><img src="../assets/icons/favorite.svg" alt="favorites"><a href="">Избраное</a></li>
+            <li class="menu__item"><img src="../assets/icons/orders_icon.svg" alt="orders"><a href="">Заказы</a></li>
+            <li class="menu__item"><img src="../assets/icons/shopping-cart.svg" alt="basket"><a href="">Корзина</a></li>
+        </ul>
+    </div>
+</section>
+<script type="module" src="../js/main.js"></script>
+<script src="../js/form.js"></script>
 </body>
 </html>

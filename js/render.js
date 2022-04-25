@@ -13,13 +13,13 @@ export function hideFade(elem) {
 }
 
 export const showElem = (elem, elemClass) => {
-    elem.classList.remove('hide')
     elem.classList.replace('hide', elemClass)
+    elem.classList.remove('hide')
 }
 
 export const hideElem = (elem, elemClass) => {
-    elem.classList.add('hide')
     elem.classList.replace(elemClass, 'hide')
+    elem.classList.add('hide')
     document.body.style.overflow = 'scroll'
 }
 

@@ -42,6 +42,7 @@
   border-radius: 4px;
   padding: 8px 20px 8px 40px;
   cursor: pointer;
+  font-size: 12px;
   color: #fff;
   transition: 0.4s ease-in-out;
 }
@@ -870,6 +871,7 @@
 }
 
 .articles {
+  padding-top: 25px;
   position: relative;
 }
 .articles .articles__content {
@@ -1321,14 +1323,15 @@
     margin: 0 16px 14px 0;
   }
 }
-.sign-in-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
+.wrapper-form {
+  position: relative;
   background: rgba(252, 213, 186, 0.8);
+}
+
+.sign-in-modal {
+  padding: 100px 0;
+  width: 100%;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1338,19 +1341,19 @@
 }
 .sign-in-modal .sign-in-modal__dialog {
   z-index: 3;
-  padding-top: 72px;
-  flex-direction: column;
-  width: 420px;
-  height: 430px;
+  height: 100%;
+  padding: 42px 80px;
   background: #fff;
+  border-radius: 12px;
   text-align: center;
+  flex-direction: column;
 }
 .sign-in-modal .sign-in-modal__dialog .dialog__container {
   max-width: 260px;
   margin: 0 auto;
 }
 .sign-in-modal .sign-in-modal__dialog .basket-btn-light {
-  margin-top: 32px;
+  margin-top: 12px;
   padding: 20px 0;
   width: 100%;
   font-size: 24px;
@@ -1384,6 +1387,7 @@
   color: #8f8f8f;
 }
 .sign-in-modal .sign-in-modal__dialog .dialog__phone-input-content {
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1404,7 +1408,7 @@
 .sign-in-modal .sign-in-modal__dialog #phone__select option {
   font-size: 16px;
 }
-.sign-in-modal .sign-in-modal__dialog .phone__input {
+.sign-in-modal .sign-in-modal__dialog input {
   border: none;
   outline: none;
   width: 66%;
@@ -1412,28 +1416,48 @@
   font-size: 16px;
   padding: 0 4px 0 16px;
   margin-right: 4px;
+}
+.sign-in-modal .sign-in-modal__dialog .phone__input {
   border-left: 2px solid #70C05B;
 }
 
 @media (max-width: 768px) {
+  .sign-in-modal {
+    padding: 70px 0;
+  }
   .sign-in-modal .sign-in-modal__dialog {
-    padding-top: 40px;
-    width: 300px;
-    height: 360px;
+    padding: 42px 55px;
   }
-  .sign-in-modal #phone__select {
-    height: 80%;
-    max-width: 34%;
-    outline: none;
-    padding-left: 16px;
-    margin-right: 4px;
-    border: none;
-    font-size: 16px;
-  }
-  .sign-in-modal #phone__select option {
+  .sign-in-modal .sign-in-modal__dialog #phone__select option {
     font-size: 16px;
     width: 50%;
     height: 50%;
+  }
+  .sign-in-modal .sign-in-modal__dialog .basket-btn-light {
+    margin-top: 12px;
+    padding: 14px 0;
+    width: 100%;
+    font-size: 24px;
+  }
+}
+@media (max-width: 500px) {
+  .sign-in-modal {
+    padding: 50px 0;
+  }
+  .sign-in-modal .sign-in-modal__dialog {
+    padding: 22px 25px;
+  }
+  .sign-in-modal .sign-in-modal__dialog .basket-btn-light {
+    margin-top: 12px;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 24px;
+  }
+  .sign-in-modal .sign-in-modal__dialog .dialog__phone-input-content {
+    height: 50px;
+  }
+  .sign-in-modal .dialog__container {
+    padding: 20px;
   }
 }
 .container {
