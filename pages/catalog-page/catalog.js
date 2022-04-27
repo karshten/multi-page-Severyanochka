@@ -1,6 +1,6 @@
 import {
-    hide, show
-} from "./render.js";
+    hideElem, showElem
+} from "../../js/render.js";
 
 const catalogModal = document.querySelector('.catalog__modal'),
     catalogBtns = document.querySelectorAll('.header__catalog')
@@ -8,11 +8,11 @@ let btnClicked = false
 catalogBtns.forEach(btn =>
     btn.addEventListener('click', () => {
         if (btnClicked === false){
-            show(catalogModal)
+            showElem(catalogModal)
             btnClicked = true
         }
         else {
-            hide(catalogModal)
+            hideElem(catalogModal)
             btnClicked = false
         }
     })

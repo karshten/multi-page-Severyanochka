@@ -1,8 +1,11 @@
 @import "../assets/fonts/fonts.css";
-@import "../assets/helpers/variables";
-@import "../assets/helpers/mixin";
-@import "../assets/css_components/header";
+@import "../assets/helpers/_variables.scss";
+@import "../assets/helpers/_mixin.scss";
+@import "../assets/css_components/_header";
 @import "../assets/css_components/searcher";
+@import "../assets/css_components/_footer";
+@import "../assets/css_components/_bottom-footer";
+@import "../assets/css_components/components";
 @import "../assets/css_components/main-page-css/intro";
 @import "../assets/css_components/product-item-component";
 @import "../assets/css_components/main-page-css/stocks";
@@ -10,12 +13,9 @@
 @import "../assets/css_components/main-page-css/offers";
 @import "../assets/css_components/main-page-css/branch";
 @import "../assets/css_components/main-page-css/articles";
-@import "../assets/css_components/footer";
-@import "../assets/css_components/bottom-footer";
-@import "../assets/css_components/catalog/main_catalog";
-@import "../assets/css_components/catalog/product_pict";
-@import "../assets/css_components/form-page-css/form";
-@import "../assets/css_components/components";
+@import "../assets/../pages/catalog-page/catalog-page-css/main_catalog";
+@import "../assets/../pages/catalog-page/catalog-page-css/product_pict";
+@import "../assets/../pages/form-page/form-page-css/form";
 
 * {
   margin: 0;
