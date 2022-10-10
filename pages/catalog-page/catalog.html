@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href='../../css/index.css'>
+    <title>Каталог_Северяночка</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__logo">
+            <a href="../../index.html">
+                <img class="logo__img" src="../../assets/icons/logo.svg" alt="logo">
+            </a>
+            <a class="logo__text" href="../../index.html">СЕВЕРЯНОЧКА</a>
+        </div>
+        <div class="header__catalog">
+            <div class="catalog__burger"></div>
+            <p>Каталог</p>
+        </div>
+        <div class="header__search__content">
+            <div class="header__search">
+                <input class="search__input" type="text" placeholder="Найти товар">
+                <img class="search__img searchBtn" src="../../assets/icons/search.svg" alt="loop">
+            </div>
+            <ul class="content__list">
+                <!--                <li class="list__item">dadad</li>-->
+                <!--                <li class="list__item">dadad</li>-->
+            </ul>
+        </div>
+
+        <ul class="menu">
+            <li class="menu__item"><img src="../../assets/icons/favorite.svg" alt="favorites"><a href="">Избраное</a></li>
+            <li class="menu__item"><img src="../../assets/icons/orders_icon.svg" alt="orders"><a href="">Заказы</a></li>
+            <li class="menu__item"><img src="../../assets/icons/shopping-cart.svg" alt="basket"><a href="">Корзина</a></li>
+        </ul>
+        <div class="header__account">
+            <div class="account__dialog">
+                <a href="../form-page/form.html" class="sign-in-btn account__btn">Войти
+                    <img class="btn__log-in" src="../../assets/icons/log-in.svg" alt="log-in">
+                </a>
+                <div class="account__authorized hide">
+                    <img src="../../assets/images/avatar.svg" alt="avatar" class="account__avatar">
+                    <h5 class="account__name">Алексей</h5>
+                    <img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow dropDown-btn">
+
+                    <ul class="account__dropDown--menu dropDown-window hide">
+                        <li class="dropDown--menu__item">
+                            <a href=""><h5>Профиль</h5></a>
+                        </li>
+                        <li class="dropDown--menu__item">
+                            <a href=""><h5>Выйти</h5></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="main_catalog">
+    <div class="container">
+        <div class="catalog__modal hide">
+            <ul class="modal__list">
+                <li class="modal__item">
+                    <a href="" class="item__link">Молоко, сыр, яйцо</a>
+                    <a href="" class="item__link">Хлеб</a>
+                    <a href="" class="item__link">Фрукты и овощи</a>
+                    <a href="" class="item__link">Замороженные продукты</a>
+                </li>
+                <li class="modal__item">
+                    <a href="" class="item__link">Напитки</a>
+                    <a href="" class="item__link">Кондитерские изделия</a>
+                    <a href="" class="item__link">Чай, кофе</a>
+                </li>
+                <li class="modal__item">
+                    <a href="" class="item__link">Бакалея</a>
+                    <a href="" class="item__link">Здоровое питание</a>
+                    <a href="" class="item__link">Зоотовары</a>
+                </li>
+                <li class="modal__item">
+                    <a href="" class="item__link">Непродовольственные товары</a>
+                    <a href="" class="item__link">Детское питание</a>
+                    <a href="" class="item__link">Мясо, птица, колбаса</a>
+                </li>
+            </ul>
+        </div>
+        <ul class="link-list">
+            <li class="li list__link-another-page">
+                <a href="../../index.html">Главная</a>
+                <img class="-right" src="../../assets/icons/arrow.svg" alt="">
+            </li>
+            <li class="li list__link-another-page">
+                <a href="">Каталог</a>
+            </li>
+        </ul>
+        <h2 class="section__title">Каталог</h2>
+    </div>
+</section>
+<section class="section__search-response hide">
+    <div class="container">
+        <h2 class="section__title">Результат поиска по запросу</h2>
+        <p class="response__label-about">по запросу
+            <span class="label-about__name"></span>
+        </p>
+        <h2 class="section__title undefined-title">Ничего не найдено</h2>
+        <div class="catalog-response__content">
+            <section class="product_pict">
+                <div class="container">
+                    <div class="product_content">
+                        <div class="img_catalog bigger__img">
+                            <img src="../../assets/images/milk-eggs-cheese.jpg" alt="milk-eggs-cheese" class="rectangle">
+                            <span class="green_linear"><a href=""
+                                                          class="href_picture_content">Молоко, сыр, яйцо</a></span>
+                        </div>
+                        <div class="img_catalog">
+                            <img src="../../assets/images/bread.png" alt="" class="square">
+                            <span class="green_linear"><a href="" class="href_picture_content">Хлеб</a></span>
+                        </div>
+                        <div class="img_catalog">
+                            <img src="../../assets/images/vegetables-fruits.png" alt="fruits-vegetables" class="square">
+                            <span class="green_linear"><a href="" class="href_picture_content">Фрукты и овощи</a></span>
+                        </div>
+                    </div>
+                    <div class="product_content more-fr">
+                        <div class="img_catalog">
+                            <img src="../../assets/images/freeze-vegetables.png" alt="freeze-vegetables" class="square">
+                            <span class="green_linear"><a href="" class="href_picture_content">Замороженные продукты</a></span>
+                        </div>
+                        <div class="img_catalog">
+                            <img src="../../assets/images/drinks.png" alt="drinks" class="square">
+                            <span class="green_linear"><a href="" class="href_picture_content">Напитки</a></span>
+                        </div>
+                        <div class="img_catalog">
+                            <img src="../../assets/images/drinks.png" alt="drinks" class="square">
+                            <span class="green_linear"><a href="" class="href_picture_content">Кондитерские изделия</a></span>
+                        </div>
+                        <div class="img_catalog">
+                            <img src="../../assets/images/coffe-tea.png" alt="coffee-tea" class="square">
+                            <span class="green_linear"><a href="" class="href_picture_content">Чай, кофе</a></span>
+                        </div>
+                    </div>
+                    <div class="product_content more-fr">
+                        <div class="img_catalog">
+                            <img src="../../assets/images/bakaleya.png" alt="bakleya" class="square">
+                            <span class="green_linear"><a href="" class="href_picture_content">Бакалея</a></span>
+                        </div>
+                        <div class="img_catalog">
+                            <img src="../../assets/images/food-healthy.png" alt="healthy7-food" class="square">
+                            <span class="green_linear"><a href=""
+                                                          class="href_picture_content">Здоровое питание</a></span>
+                        </div>
+                        <div class="img_catalog bigger__img">
+                            <img src="../../assets/images/zoo.svg" alt="zoo" class="rectangle">
+                            <span class="green_linear"><a href="" class="href_picture_content">Зоотовары</a></span>
+                        </div>
+                    </div>
+                    <div class="product_content">
+                        <div class="img_catalog">
+                            <img src="../../assets/images/child-food.png" alt="child-food" class="square">
+                            <span class="green_linear"><a href=""
+                                                          class="href_picture_content">Детское питание</a></span>
+                        </div>
+                        <div class="img_catalog bigger__img">
+                            <img src="../../assets/images/sosuage-meat.png" alt="sosuage-meat" class="square">
+                            <span class="green_linear"><a href="" class="href_picture_content">Мясо, птица, колбаса</a></span>
+                        </div>
+                        <div class="img_catalog">
+                            <img src="../../assets/images/soap-washer.png" alt="washer-items" class="square">
+                            <span class="green_linear"><a href="" class="href_picture_content">Непродовольственные товары</a></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+<main id="main">
+    <section class="product_pict">
+        <div class="container">
+            <div class="product_content">
+                <div class="img_catalog bigger__img">
+                    <img src="../../assets/images/milk-eggs-cheese.jpg" alt="milk-eggs-cheese" class="rectangle">
+                    <span class="green_linear"><a href="" class="href_picture_content">Молоко, сыр, яйцо</a></span>
+                </div>
+                <div class="img_catalog">
+                    <img src="../../assets/images/bread.png" alt="" class="square">
+                    <span class="green_linear"><a href="" class="href_picture_content">Хлеб</a></span>
+                </div>
+                <div class="img_catalog">
+                    <img src="../../assets/images/vegetables-fruits.png" alt="fruits-vegetables" class="square">
+                    <span class="green_linear"><a href="" class="href_picture_content">Фрукты и овощи</a></span>
+                </div>
+            </div>
+            <div class="product_content more-fr">
+                <div class="img_catalog">
+                    <img src="../../assets/images/freeze-vegetables.png" alt="freeze-vegetables" class="square">
+                    <span class="green_linear"><a href="" class="href_picture_content">Замороженные продукты</a></span>
+                </div>
+                <div class="img_catalog">
+                    <img src="../../assets/images/drinks.png" alt="drinks" class="square">
+                    <span class="green_linear"><a href="" class="href_picture_content">Напитки</a></span>
+                </div>
+                <div class="img_catalog">
+                    <img src="../../assets/images/drinks.png" alt="drinks" class="square">
+                    <span class="green_linear"><a href="" class="href_picture_content">Кондитерские изделия</a></span>
+                </div>
+                <div class="img_catalog">
+                    <img src="../../assets/images/coffe-tea.png" alt="coffee-tea" class="square">
+                    <span class="green_linear"><a href="" class="href_picture_content">Чай, кофе</a></span>
+                </div>
+            </div>
+            <div class="product_content more-fr">
+                <div class="img_catalog">
+                    <img src="../../assets/images/bakaleya.png" alt="bakleya" class="square">
+                    <span class="green_linear"><a href="" class="href_picture_content">Бакалея</a></span>
+                </div>
+                <div class="img_catalog">
+                    <img src="../../assets/images/food-healthy.png" alt="healthy7-food" class="square">
+                    <span class="green_linear"><a href="" class="href_picture_content">Здоровое питание</a></span>
+                </div>
+                <div class="img_catalog bigger__img">
+                    <img src="../../assets/images/zoo.svg" alt="zoo" class="rectangle">
+                    <span class="green_linear"><a href="" class="href_picture_content">Зоотовары</a></span>
+                </div>
+            </div>
+            <div class="product_content">
+                <div class="img_catalog">
+                    <img src="../../assets/images/child-food.png" alt="child-food" class="square">
+                    <span class="green_linear"><a href="" class="href_picture_content">Детское питание</a></span>
+                </div>
+                <div class="img_catalog bigger__img">
+                    <img src="../../assets/images/sosuage-meat.png" alt="sosuage-meat" class="square">
+                    <span class="green_linear"><a href="" class="href_picture_content">Мясо, птица, колбаса</a></span>
+                </div>
+                <div class="img_catalog">
+                    <img src="../../assets/images/soap-washer.png" alt="washer-items" class="square">
+                    <span class="green_linear"><a href=""
+                                                  class="href_picture_content">Непродоволь  ственные товары</a></span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<section class="footer">
+    <div class="container">
+        <img class="footer__logo" src="../../assets/icons/footer_logo.svg" alt="logo">
+        <ul class="footer__content">
+            <li class="content__item"><a href="">О компании</a></li>
+            <li class="content__item"><a href="">Контакты</a></li>
+            <li class="content__item"><a href="">Вакансии</a></li>
+            <li class="content__item"><a href="">Статьи</a></li>
+            <li class="content__item"><a href="">Политика обработки персональных данных</a></li>
+        </ul>
+        <ul class="footer__media">
+            <li class="media__item">
+                <a href="https://www.instagram.com/" target="_blank"><img src="../../assets/icons/instagram.svg"
+                                                                          alt="inst"></a>
+                <a href="https://vk.com/" target="_blank"><img src="../../assets/icons/vkontakte.svg" alt="vk"></a>
+                <a href="https://ru-ru.facebook.com/" target="_blank"><img src="../../assets/icons/facebook.svg"
+                                                                           alt="facebook"></a>
+                <a href="https://ok.ru/" target="_blank"><img src=../../assets/icons/ok.svg alt="ok"></a>
+            </li>
+            <li class="media__item">
+                <img src="../../assets/icons/phone_icon.svg" alt="phone">
+                <p class="item__number">8 800 777 33 33</p>
+            </li>
+        </ul>
+        <p class="footer__design">Дизайн <img src="../../assets/icons/design-logo.svg" alt="design-logo"></p>
+    </div>
+</section>
+<section class="bottom-menu">
+    <div class="container">
+        <ul class="menu">
+            <li class="menu__item header__catalog">
+                <div class="item__burger">
+                    <div class="burger__line"></div>
+                </div>
+                <a href="">Каталог</a>
+            </li>
+            <li class="menu__item"><img src="../../assets/icons/favorite.svg" alt="favorites"><a href="">Избраное</a></li>
+            <li class="menu__item"><img src="../../assets/icons/orders_icon.svg" alt="orders"><a href="">Заказы</a></li>
+            <li class="menu__item"><img src="../../assets/icons/shopping-cart.svg" alt="basket"><a href="">Корзина</a></li>
+            <li class="menu__item menu__account">
+                <div class="header__account">
+                    <div class="account__dialog">
+                        <a href="../form-page/form.html" class="sign-in-btn account__btn">Войти
+                            <img class="btn__log-in" src="../../assets/icons/log-in.svg" alt="log-in">
+                        </a>
+                        <div class="account__authorized hide">
+                            <img src="../../assets/images/avatar.svg" alt="avatar"
+                                 class="account__avatar">
+                            <span class="account__name">Алексей</span>
+                            <img src="../../assets/icons/arrow.svg" alt="arrow" class="arrow dropDown-btn">
+                            <ul class="account__dropDown--menu dropDown-window hide">
+                                <li class="dropDown--menu__item">
+                                    <a href=""><h5>Профиль</h5></a>
+                                </li>
+                                <li class="dropDown--menu__item">
+                                    <a href=""><h5>Выйти</h5></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<script type="module" src="../../js/main.js"></script>
+<script type="module" src="../../js/searcher.js"></script>
+<script type="module" src="catalog.js"></script>
+</body>
+</html>

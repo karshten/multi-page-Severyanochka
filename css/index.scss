@@ -1,7 +1,21 @@
 @import "../assets/fonts/fonts.css";
-@import "../assets/helpers/variables";
-@import "../assets/helpers/mixin";
-
+@import "../assets/helpers/_variables.scss";
+@import "../assets/helpers/_mixin.scss";
+@import "../assets/css_components/_header";
+@import "../assets/css_components/searcher";
+@import "../assets/css_components/_footer";
+@import "../assets/css_components/_bottom-footer";
+@import "../assets/css_components/components";
+@import "../assets/css_components/main-page-css/intro";
+@import "../assets/css_components/product-item-component";
+@import "../assets/css_components/main-page-css/stocks";
+@import "../assets/css_components/main-page-css/novelties";
+@import "../assets/css_components/main-page-css/offers";
+@import "../assets/css_components/main-page-css/branch";
+@import "../assets/css_components/main-page-css/articles";
+@import "../assets/../pages/catalog-page/catalog-page-css/main_catalog";
+@import "../assets/../pages/catalog-page/catalog-page-css/product_pict";
+@import "../assets/../pages/form-page/form-page-css/form";
 
 * {
   margin: 0;
@@ -22,45 +36,3 @@ ul {
 a {
   text-decoration: none;
 }
-
-.container {
-  max-width: 1208px;
-  margin: 0 auto;
-}
-
-.section__title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
-
-.arrow-right {
-  transform: rotate(270deg);
-}
-
-.arrow-left {
-  transform: rotate(90deg);
-}
-
-.chevrons-left {
-  transform: rotate(180deg);
-}
-
-.basket-btn {
-  padding: 12px 95px;
-  text-align: center;
-  border-radius: 4px;
-  color: $green;
-  border: 1px solid $green;
-  cursor: pointer;
-  font-size: 18px;
-  transition: .4s ease-in-out;
-
-
-  &:focus , &:hover {
-    background: $orange;
-    color: #fff;
-    border: 1px solid $orange;
-  }
-}
-

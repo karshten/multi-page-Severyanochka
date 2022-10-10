@@ -1,0 +1,33 @@
+.branches {
+  margin-bottom: 100px;
+
+  .branches__location-content {
+    display: flex;
+    flex-wrap: wrap;
+
+    & #map {
+      height: 354px;
+      width: 100%;
+    }
+
+    & .location-content__item {
+      font-size: 14px;
+      margin-right: 24px;
+      transition: .3s ease-in-out;
+      margin-bottom: 24px;
+      @include btn-styles(#f3f2f1, none, 4px, 8px 12px 6px);
+
+      &:hover {
+        background: $green;
+
+        & a {
+          color: #fff;
+        }
+      }
+    }
+    & a {
+      color: $darkGrey;
+      text-align: center;
+    }
+  }
+}

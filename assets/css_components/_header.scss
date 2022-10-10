@@ -1,0 +1,145 @@
+@import "../helpers/variables";
+@import "header_account-authorize";
+.header {
+  margin: 15px 0;
+
+  & .container {
+    @include flex(flex, space-evenly, center);
+    flex-wrap: wrap;
+  }
+
+  & .header__logo {
+    @include flex(flex, start, center);
+    margin-right: 40px;
+
+    & .logo__img {
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
+    & .logo__text {
+      margin-left: 10px;
+      @include text_styles(0, 14px, 700, $black);
+    }
+  }
+
+  & .header__catalog {
+    @include flex(flex, space-between, center);
+    @include btn-styles($green, 1px solid $green, 4px, 11px 16px 11px 16px);
+    margin-right: 16px;
+    transition: .4s ease-in-out;
+
+    &:hover {
+      background: $light-green;
+      border: 1px solid $green;
+
+      & p {
+        color: #70C05B;
+      }
+
+      & .catalog__burger,
+      & .catalog__burger:before,
+      & .catalog__burger:after {
+        background: $green;
+      }
+
+
+    }
+
+    & .catalog__burger {
+      margin-right: 23px;
+      position: relative;
+      width: 19px;
+      height: 1px;
+      background: #fff;
+      transition: inherit;
+    }
+
+    & .catalog__burger:before, & .catalog__burger:after {
+      content: '';
+      position: absolute;
+      width: 19px;
+      height: 1px;
+      background: #fff;
+      transition: inherit;
+    }
+
+    & .catalog__burger:before {
+      top: -5px;
+    }
+
+    & .catalog__burger:after {
+      bottom: -5px;
+    }
+
+    & p {
+      color: #fff;
+      font-size: 16px;
+      transition: .4s ease-in-out;
+    }
+
+  }
+}
+
+@media (max-width: 1208px) {
+  .header .header__logo {
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .header {
+    & .container {
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .header {
+
+    & .header__logo {
+      margin-right: 15px;
+
+      & .logo__img {
+        margin-right: 0;
+      }
+
+      & .menu a {
+        display: none;
+      }
+    }
+
+    & .menu {
+      margin-right: 0;
+    }
+
+    & .header__catalog {
+      min-width: 40px;
+      height: 40px;
+      padding: 0;
+      justify-content: center;
+
+      & .catalog__burger {
+        margin-right: 0;
+      }
+
+      & p {
+        font-size: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .header {
+
+    & .header__catalog {
+      display: none;
+    }
+
+    & .logo__text {
+      display: none;
+    }
+  }
+}

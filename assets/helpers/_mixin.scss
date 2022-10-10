@@ -1,1 +1,20 @@
+@mixin flex ($flex, $justify-content, $align-items) {
+  display: $flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
 
+@mixin text_styles ($margin, $fz, $fw, $color){
+    margin-bottom: $margin;
+    font-size: $fz;
+    font-weight: $fw;
+    color: $color;
+}
+
+@mixin btn-styles ($background, $border, $border-radius, $padding){
+  background: $background;
+  border: $border;
+  border-radius: $border-radius;
+  padding: $padding;
+  cursor: pointer;
+}

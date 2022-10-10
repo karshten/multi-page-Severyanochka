@@ -1,0 +1,246 @@
+.offers {
+  margin: 70px 0;
+
+  & .offers__content {
+    @include flex(flex, space-between, center);
+
+    & > div {
+      position: relative;
+      max-width: 584px;
+      max-height: 200px;
+      display: flex;
+      border-radius: 4px;
+      margin-bottom: 30px;
+      overflow: hidden;
+    }
+
+    & .content__left {
+      padding: 8px 0 0 40px;
+      background: #FCD5BA;
+    }
+
+    & .content__right {
+      padding: 11px 0 0 40px;
+      background: $light-green;
+      display: flex;
+
+      & .content__text {
+        margin-right: 10px;
+      }
+    }
+
+    & .content__text {
+      max-width: 258px;
+      margin-right: 21px;
+    }
+
+    & .text__title {
+      font-size: 24px;
+      margin: 22px 0 6px 0;
+    }
+
+    & p {
+      width: 100%;
+      font-size: 16px;
+      color: $black;
+    }
+
+    & .left__soap {
+      cursor: pointer;
+      animation: rotating 2s linear infinite;
+
+      &:hover {
+        animation: none;
+      }
+    }
+
+    & .right__star {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      top: 15px;
+      left: 35%;
+      animation: rotating 2s ease-in-out infinite;
+    }
+
+    & .second {
+      bottom: 15px;
+      left: 15px;
+      top: auto;
+    }
+
+    & .right__basket {
+      animation: upDown 2s ease-in-out infinite;
+    }
+
+    @keyframes upDown {
+      0% {
+        transform: translateY(0);
+      }
+
+      33% {
+        transform: translateY(5px);
+      }
+
+      66% {
+        transform: translateY(-5px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes rotating {
+      0% {
+        transform: rotate(0) scale(1);
+      }
+
+      50% {
+        transform: rotate(-28deg) scale(1.1);
+      }
+
+      100% {
+        transform: rotate(0) scale(1);
+      }
+    }
+  }
+}
+
+@media (max-width: 1208px) {
+  .offers .offers__content {
+
+    & .content__left {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .offers .offers__content {
+
+    & .content__left, .content__right {
+      padding: 0 0 0 20px;
+      max-width: 352px;
+      height: 160px;
+    }
+
+    & .content__text {
+      min-width: 170px;
+      margin-right: 0;
+    }
+
+    & .text__title {
+      width: 100%;
+      font-size: 18px;
+    }
+
+    & p {
+      font-size: 12px;
+    }
+
+    & .left__soap {
+      width: 205px;
+    }
+
+    & .right__star {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .offers {
+
+    & .offers__content {
+      flex-direction: column;
+      align-items: center;
+
+      & .content__left, .content__right {
+        padding: 12px 15px 0 40px;
+        min-width: 540px;
+        height: 200px;
+        margin-right: 0;
+      }
+
+      & .content__text {
+        min-width: 220px;
+        margin-right: 0;
+      }
+
+      & .text__title {
+        width: 100%;
+        font-size: 20px;
+        margin-top: 28px;
+      }
+
+      & p {
+        font-size: 16px;
+      }
+
+      & .left__soap {
+        width: 255px;
+      }
+
+      & .right__basket {
+        margin-top: 15px;
+        width: 202px;
+        height: 150px;
+      }
+
+      & .right__star {
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .offers {
+    margin: 30px 0;
+
+    & .offers__content {
+
+      & .content__left, .content__right {
+        padding: 0 15px 0 20px;
+        min-width: auto;
+        max-width: 336px;
+        height: 170px;
+        margin-right: 0;
+      }
+
+      & .content__text {
+        min-width: 174px;
+        margin-right: 0;
+        @include flex(flex, center, center);
+        flex-direction: column;
+      }
+
+      & .text__title {
+        width: 100%;
+        font-size: 20px;
+        margin-top: 0;
+      }
+
+      & p {
+        font-size: 16px;
+      }
+
+      & .left__soap {
+        width: 205px;
+      }
+
+      & .right__star {
+        width: 15px;
+        height: 15px;
+        left: 40%;
+      }
+
+      & .second {
+        left: 15px;
+      }
+    }
+  }
+}

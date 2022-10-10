@@ -1,0 +1,119 @@
+.header, .menu__account {
+
+  & .header__account {
+    margin-left: 24px;
+
+    & .account__authorized {
+      padding: 10px;
+      @include flex(flex, space-between, center);
+      position: relative;
+      z-index: 2;
+      background: #fff;
+      box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+    }
+
+    & .account__dropDown--menu {
+      padding: 10px 10px 0 10px;
+      position: absolute;
+      width: 100%;
+      top: 105%;
+      right: 0;
+      z-index: 2;
+      background: #fff;
+      box-shadow: 4px 3px 16px rgba(0, 0, 0, .3);
+      border-radius: 4px;
+    }
+
+    & .dropDown--menu__item {
+      margin-bottom: 12px;
+
+      & a {
+        color: $black;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+
+    & .account__btn {
+      @include flex(flex, space-between, center);
+      @include btn-styles($orange, 1px solid $orange, 4px, 8px 20px 8px 40px);
+      font-size: 12px;
+      color: #fff;
+      transition: .4s ease-in-out;
+
+      &:hover {
+        background: $light-orange;
+        color: $orange;
+      }
+    }
+
+    & .btn__log-in {
+      margin-left: 35px;
+    }
+
+    & h5 {
+      margin: 0 23px 0 10px;
+      font-weight: 400;
+    }
+
+    & .hide {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1208px) {
+  .header {
+
+    & .header__account {
+      margin-left: auto;
+
+      & .account__authorized {
+
+        & .arrow {
+          margin-left: 10px;
+        }
+      }
+
+      & .account__btn {
+        padding: 8px 16px;
+        font-size: 0;
+      }
+
+      & .btn__log-in {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .header__account .account__authorized span {
+    display: none;
+  }
+}
+
+@media (max-width: 950px) {
+  .account__name {
+    display: none;
+  }
+  .logo__text {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+
+    & .header__account {
+      display: none;
+    }
+
+    & .logo__text {
+      display: block;
+    }
+  }
+}

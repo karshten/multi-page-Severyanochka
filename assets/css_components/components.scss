@@ -1,0 +1,157 @@
+@import "../helpers/mixin";
+@import "../helpers/variables";
+
+.container {
+  position: relative;
+  max-width: 1208px;
+  margin: 0 auto;
+}
+
+.section__title {
+  @include text_styles(40px, 36px, 700, $black);
+}
+
+.arrow {
+  cursor: pointer;
+}
+
+.-right {
+  transform: rotate(270deg);
+}
+
+.-left {
+  transform: rotate(90deg);
+}
+
+.chevrons-left {
+  transform: rotate(180deg);
+}
+
+.basket-btn {
+  max-width: 256px;
+  text-align: center;
+  @include text_styles(0, 18px, 400, $green);
+  @include btn-styles(#fff, 1px solid $green, 4px, 12px 95px);
+  transition: .4s ease-in-out;
+
+  &:focus, &:hover {
+    background: $orange;
+    color: #fff;
+    border: 1px solid $orange;
+  }
+}
+
+.basket-btn-light {
+  text-align: center;
+  @include text_styles(0, 18px, 400, $orange);
+  @include btn-styles($light-orange, 1px solid $orange, 4px, 12px 80px);
+  transition: .4s ease-in-out;
+}
+
+.menu {
+  @include flex(flex, space-between, center);
+
+  & .menu__item {
+    @include flex(flex, start, center);
+    flex-direction: column;
+    margin-left: 24px;
+  }
+
+  & a {
+    margin-top: 10px;
+    color: $black;
+    font-size: 12px;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.section__content {
+  @include flex(flex, space-between, center);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1208px) {
+  .container {
+    max-width: 1050px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .container {
+    max-width: 920px;
+  }
+  .menu {
+
+    & .menu__item {
+      margin-right: 18px;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .container {
+    max-width: 737px;
+  }
+
+  .section__title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .link-list {
+
+    & .list__link-another-page {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    max-width: 336px;
+    padding: 0 5px;
+  }
+  .section__title {
+    @include text_styles(25px, 18px, 700, $black);
+  }
+
+  .show-all {
+    font-size: 14px;
+  }
+}
+
+.link-list {
+  margin: 10px 0 30px;
+  display: flex;
+
+  & .list__link-another-page {
+    margin-right: 10px;
+    @include text_styles(0, 12px, 400, $black);
+    transition: .3s ease-in-out;
+
+    & :hover {
+      color: $gray;
+    }
+  }
+
+  & a {
+    color: $black;
+  }
+
+  & img {
+    margin-left: 7px;
+  }
+}
